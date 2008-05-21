@@ -6,5 +6,8 @@
     <file>images/open.png</file>
     <file>images/paste.png</file>
     <file>images/save.png</file>
+	<file>images/doc.png</file>
+	<file>images/docFolder.png</file>
+	<file>images/db.png</file>
 </qresource>
 </RCC>

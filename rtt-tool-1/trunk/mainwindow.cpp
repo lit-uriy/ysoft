@@ -56,17 +56,20 @@ void MainWindow::createActions()
     newAct->setStatusTip(tr("Создать новый файл"));
     connect(newAct, SIGNAL(triggered()), this, SLOT(newFile()));
 	*/
-    actOpenDir = new QAction(QIcon(":/images/open.png"), tr("Открыть &каталог..."), this);
+    //actOpenDir = new QAction(QIcon(":/images/open.png"), tr("Открыть &каталог..."), this);
+	actOpenDir = new QAction(QIcon(":/images/docFolder.png"), tr("Открыть &каталог..."), this);
     actOpenDir->setShortcut(tr("Ctrl+K"));
     actOpenDir->setStatusTip(tr("Открыть каталог с html файлами"));
     connect(actOpenDir, SIGNAL(triggered()), this, SLOT(SlotOpenDir()));
 	
-    actOpenDb = new QAction(QIcon(":/images/open.png"), tr("Открыть &БД..."), this);
+    //actOpenDb = new QAction(QIcon(":/images/open.png"), tr("Открыть &БД..."), this);
+	actOpenDb = new QAction(QIcon(":/images/db.png"), tr("Открыть &БД..."), this);
     actOpenDb->setShortcut(tr("Ctrl+B"));
     actOpenDb->setStatusTip(tr("Открыть базу данных"));
     connect(actOpenDb, SIGNAL(triggered()), this, SLOT(SlotOpenDb()));	
 	
-    actOpenTs = new QAction(QIcon(":/images/open.png"), tr("Открыть &TS-файл..."), this);
+    //actOpenTs = new QAction(QIcon(":/images/open.png"), tr("Открыть &TS-файл..."), this);
+	actOpenTs = new QAction(QIcon(":/images/doc.png"), tr("Открыть &TS-файл..."), this);
     actOpenTs->setShortcut(tr("Ctrl+T"));
     actOpenTs->setStatusTip(tr("Открыть TS-файл"));
     connect(actOpenTs, SIGNAL(triggered()), this, SLOT(SlotOpenTs()));	
@@ -436,7 +439,7 @@ void MainWindow::SlotOpenDir()
 		//QMessageBox::information(this, tr("Информация"), tr("Каталог пуст"));
 		dirOpen->setPath(dirname);
 		statusBar()->showMessage(dirname);
-		ReadFiles();
+		ReadFilesFromDir();
 	}
 	else
 	{
@@ -593,7 +596,7 @@ void MainWindow::about()
 /*=====================================================================
 				Чтение содержимого каталога
   ===================================================================*/
-void MainWindow::ReadFiles()
+void MainWindow::ReadFilesFromDir()
 {
   QStringList		filelist;
   QDir::Filters		filtres;

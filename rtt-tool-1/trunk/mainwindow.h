@@ -70,7 +70,7 @@ private:
     void readSettings();
     void writeSettings();
 */
-	void ReadFiles();
+	void ReadFilesFromDir();
 
 	Child	*child;
 /*	
