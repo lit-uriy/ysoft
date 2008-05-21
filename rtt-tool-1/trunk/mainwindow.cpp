@@ -10,11 +10,10 @@
 
 MainWindow::MainWindow()
 {
-  //QVBoxLayout	*lay = new QVBoxLayout(this);
+
   
 	child = new Child;
-	//lay->addWidget(list);
-	//setLayout(lay);
+
 	setCentralWidget(child);
 	dirOpen = new QDir;
 /*
@@ -29,7 +28,7 @@ MainWindow::MainWindow()
     createMenus();		// Создаем меню
     createToolBars();	// Создаем панель инструментов
     createStatusBar();	// Создаем панель статуса
-    //loginAnonymous();	// Вход от имени анонимного пользователя 
+
 	//updateMenus();		// Обновляем меню
     //readSettings();		// Читаем настройки (из реестра)
 	
@@ -59,8 +58,18 @@ void MainWindow::createActions()
 	*/
     actOpenDir = new QAction(QIcon(":/images/open.png"), tr("Открыть &каталог..."), this);
     actOpenDir->setShortcut(tr("Ctrl+K"));
-    actOpenDir->setStatusTip(tr("Открыть существующий каталог"));
+    actOpenDir->setStatusTip(tr("Открыть каталог с html файлами"));
     connect(actOpenDir, SIGNAL(triggered()), this, SLOT(SlotOpenDir()));
+	
+    actOpenDb = new QAction(QIcon(":/images/open.png"), tr("Открыть &БД..."), this);
+    actOpenDb->setShortcut(tr("Ctrl+B"));
+    actOpenDb->setStatusTip(tr("Открыть базу данных"));
+    connect(actOpenDb, SIGNAL(triggered()), this, SLOT(SlotOpenDb()));	
+	
+    actOpenTs = new QAction(QIcon(":/images/open.png"), tr("Открыть &TS-файл..."), this);
+    actOpenTs->setShortcut(tr("Ctrl+T"));
+    actOpenTs->setStatusTip(tr("Открыть TS-файл"));
+    connect(actOpenTs, SIGNAL(triggered()), this, SLOT(SlotOpenTs()));	
 	/*
     saveAct = new QAction(QIcon(":/images/save.png"), tr("&Сохранить"), this);
     saveAct->setShortcut(tr("Ctrl+S"));
@@ -158,8 +167,8 @@ void MainWindow::createMenus()
 	menuFile = menuBar()->addMenu(tr("&Файл"));
 //    menuFile->addAction(newAct);
     menuFile->addAction(actOpenDir);
-//    menuFile->addAction(saveAct);
-//    menuFile->addAction(saveAsAct);
+    menuFile->addAction(actOpenDb);
+    menuFile->addAction(actOpenTs);
 	menuFile->addSeparator();
 	menuFile->addAction(actExit);
 	/*
@@ -205,7 +214,8 @@ void MainWindow::createToolBars()
     ToolBarFile = addToolBar(tr("Файл"));
     //ToolBarFile->addAction(newAct);
     ToolBarFile->addAction(actOpenDir);
-    //ToolBarFile->addAction(saveAct);
+    ToolBarFile->addAction(actOpenDb);
+	ToolBarFile->addAction(actOpenTs);
 /*
     ToolBarEdit = addToolBar(tr("Правка"));
     ToolBarEdit->addAction(cutAct);
@@ -222,21 +232,7 @@ void MainWindow::createStatusBar()
     statusBar()->showMessage(tr("Готов"));
 }
 
-/*=====================================================================
-			Вход в систему от имени анонимного пользователя
-  ===================================================================
-void MainWindow::loginAnonymous()
-{
-	setCurrentUser(UIDanonymous);
-}*/
 
-/*=====================================================================
-			Установка текущего пользователя
-  ===================================================================
-void MainWindow::setCurrentUser(UID uid)
-{
-	userID=uid;
-}*/
 
 
 /*===================================================================
@@ -446,7 +442,99 @@ void MainWindow::SlotOpenDir()
 	{
 		statusBar()->showMessage(tr("Готов"));
 	}
+	
 }
+
+//	Файл->Открыть БД	
+void MainWindow::SlotOpenDb()
+{
+/*
+  QFileDialog::Options	options;
+  QString				caption;
+  QString				dir;
+  QString				filter;
+  QString				selectedFilter;
+	
+	
+	options = QFileDialog::DontResolveSymlinks | QFileDialog::ShowDirsOnly;
+	//options |= QFileDialog::DontUseNativeDialog;
+	
+	caption = tr("QFileDialog::getExistingDirectory()");
+	
+	if (dirOpen->path().isEmpty())
+	{
+		dir = QString();//tr();
+	}
+	else
+	{
+		dir = dirOpen->path();
+	}
+	
+	QString dirname = QFileDialog::getExistingDirectory(this,
+							 caption,
+							 dir,
+							 options);
+	
+	if (!dirname.isEmpty())
+	{
+		//QMessageBox::information(this, tr("Информация"), tr("Каталог пуст"));
+		dirOpen->setPath(dirname);
+		statusBar()->showMessage(dirname);
+		ReadFiles();
+	}
+	else
+	{
+		statusBar()->showMessage(tr("Готов"));
+	}
+*/	
+}
+
+
+//	Файл->Открыть TS-файл	
+void MainWindow::SlotOpenTs()
+{
+/*
+  QFileDialog::Options	options;
+  QString				caption;
+  QString				dir;
+  QString				filter;
+  QString				selectedFilter;
+	
+	
+	options = QFileDialog::DontResolveSymlinks | QFileDialog::ShowDirsOnly;
+	//options |= QFileDialog::DontUseNativeDialog;
+	
+	caption = tr("QFileDialog::getExistingDirectory()");
+	
+	if (dirOpen->path().isEmpty())
+	{
+		dir = QString();//tr();
+	}
+	else
+	{
+		dir = dirOpen->path();
+	}
+	
+	QString dirname = QFileDialog::getExistingDirectory(this,
+							 caption,
+							 dir,
+							 options);
+	
+	if (!dirname.isEmpty())
+	{
+		//QMessageBox::information(this, tr("Информация"), tr("Каталог пуст"));
+		dirOpen->setPath(dirname);
+		statusBar()->showMessage(dirname);
+		ReadFiles();
+	}
+	else
+	{
+		statusBar()->showMessage(tr("Готов"));
+	}
+*/	
+}
+
+
 /*
 //	Файл->Сохранить	
 void MainWindow::save()

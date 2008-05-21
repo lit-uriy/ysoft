@@ -42,6 +42,8 @@ private slots:
 //    void newFile();
 //    void open();
 	void SlotOpenDir();
+	void SlotOpenDb();
+	void SlotOpenTs();
 /*    void save();
     void saveAs();
 	void login();
@@ -59,14 +61,13 @@ private slots:
 */
 private:
 
-//	enum UID{UIDroot, UIDadmin, UIDnnn, UIDeng, UIDanonymous=65535};
-	
-//	void setCurrentUser(UID uid);
+
     void createActions();
     void createMenus();
     void createToolBars();
     void createStatusBar();
-/*    void readSettings();
+/*	
+    void readSettings();
     void writeSettings();
 */
 	void ReadFiles();
@@ -86,7 +87,8 @@ private:
 
     // Меню
 	QMenu	*menuFile;
-/*    QMenu	*menuEdit;
+/*	
+    QMenu	*menuEdit;
 	QMenu	*menuView;
 	QMenu	*menuOperator;
 	QMenu	*menuSetting;
@@ -100,7 +102,9 @@ private:
 	// Действия
 		// Файл
 //    QAction	*newAct;
-    QAction *actOpenDir;
+    QAction	*actOpenDir;
+	QAction	*actOpenDb;
+	QAction	*actOpenTs;
     //QAction *saveAct;
     //QAction *saveAsAct;
     QAction *actExit;	
