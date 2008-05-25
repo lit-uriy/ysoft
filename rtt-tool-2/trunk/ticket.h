@@ -56,6 +56,8 @@ bool CreateTickets(QStringList list, QString component, QString milestone, QStri
 	t_time = query.value(0).toInt();
 	t_changetime = t_time;
 	
+	qDebug() << "Max time = "  << t_time << "\n\r";
+	
 	// Заполним одинаковые атрибуты тикетов для БД
 	t_type = tr("задача");
 	t_component = component;
@@ -111,10 +113,15 @@ bool CreateTickets(QStringList list, QString component, QString milestone, QStri
 			)";
 	query.prepare(qstr);
 	// Индивидуально для каждого тикета
-	foreach(QString section, list)
+	qDebug() << "\t++++ Make Ticket ++++" << "\n\r";
+	
+	foreach (QString section, list)
 	{
+		qDebug() << "Ticket: " << section;
+		
 		t_summary = tr("секция ") + section;
 		t_description = tr("перевод секции ") + section + tr(" в файле ") + filename;
+		
 		query.bindValue(":type", t_type);
 		query.bindValue(":time", t_time);
 		query.bindValue(":changetime", t_changetime);
@@ -134,10 +141,14 @@ bool CreateTickets(QStringList list, QString component, QString milestone, QStri
 		ok = query.exec();
 		if (!ok)
 		{
-			qDebug() << "Eror query in Section "  << section <<"\n\r";
+			qDebug() << "Error" <<"\n\r";
 			qDebug() << "Query Mesage: " << query.lastError().text() << "\n\r";
 			return ok;
-		} 		
+		}
+		else
+		{
+			qDebug() << "Ok: " << "\n\r";
+		}
 	}
 	return ok;
 }

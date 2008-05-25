@@ -9,7 +9,7 @@
 //=====================================================
 //		Получим список секций ts-файла
 //=====================================================
-bool GetListFrom(QFile *tsfile, QStringList list)
+bool GetListFrom(QFile *tsfile, QStringList &list)
 {
   int	errorLine;
   int	errorColumn;
@@ -25,7 +25,7 @@ bool GetListFrom(QFile *tsfile, QStringList list)
 
     QDomElement root = doc.firstChildElement("TS");
     QDomElement context = root.firstChildElement("context");
-    QString szValue = context.nodeValue();
+    QString		szValue = context.nodeValue();
 
     for(; !context.isNull(); context = context.nextSiblingElement("context")) 
     {
@@ -33,6 +33,7 @@ bool GetListFrom(QFile *tsfile, QStringList list)
         QString szName = name.nodeName();
 		QString szValue = name.text();
         list.append( szValue);
+		qDebug() << "See section: " << szValue << "\n\r";
     } 
 
     return ok;
