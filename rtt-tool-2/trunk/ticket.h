@@ -1,11 +1,15 @@
+#include <QtSql>
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
+
 #include <QStringList>
 #include <QString>
+#include <QObject>
+#include <QVariant>
 #include <QDebug>
 
-
+#define tr(s)	QObject::tr(s)
 //=====================================================
 //		Создаем тикеты
 //=====================================================
@@ -35,15 +39,15 @@ bool CreateTickets(QStringList list, QString component, QString milestone, QStri
   
 
 	// Сначала узнаем время последнего тикета
-	qstr = "SELECT MAX(time) FROM ticket"
-	ok = query(qstr);
+	qstr = "SELECT MAX(time) FROM ticket";
+	ok = query.exec(qstr);
     if (!ok)
 	{
 		qDebug() << "Select Time status: " << query.lastError().text() << "\n\r";
 		return ok;
     }
 	query.first();
-	ok = !query.isNull();
+	ok = !query.isNull(0);
     if (!ok)
 	{
 		qDebug() << "Time is NULL "  << "\n\r";
@@ -105,7 +109,7 @@ bool CreateTickets(QStringList list, QString component, QString milestone, QStri
 			:description, \
 			:keywords \
 			)";
-	appdbquery.prepare(qstr);
+	query.prepare(qstr);
 	// Индивидуально для каждого тикета
 	foreach(QString section, list)
 	{
@@ -127,8 +131,17 @@ bool CreateTickets(QStringList list, QString component, QString milestone, QStri
 		query.bindValue(":summary", t_summary);
 		query.bindValue(":description", t_description);
 		query.bindValue(":keywords", t_keywords);
+		ok = query.exec();
+		if (!ok)
+		{
+			qDebug() << "Eror query in Section "  << section <<"\n\r";
+			qDebug() << "Query Mesage: " << query.lastError().text() << "\n\r";
+			return ok;
+		} 		
 	}
+	return ok;
 }
+/*
 INSERT INTO ticket VALUES(11,'задача',1210408131,1210408131,'Qt Designer','обычный','обычный','lit-uriy','lit-uriy','',NULL,'Перевод TS-файлов','new',NULL,'секция PluginDialog','перевод секции PluginDialog в файле designer_ru.ts','');
 
 
@@ -167,4 +180,4 @@ resolution
 summary
 description
 keywords
-
+*/

@@ -23,10 +23,11 @@ int main(int argc, char *argv[])
   QDir		tsdir;
   QFile 	tsfile;
   QString	tsname;
+  QString	dbname;
   bool		ok;
   QStringList list;
   
-	
+	dbname = "trac.db";
 	tsname = "assistant_ru.ts"; // linguist_ru.ts qt_ru.ts
 	tsdir = QLibraryInfo::location(QLibraryInfo::TranslationsPath);
 	tsfile.setFileName(tsdir.absolutePath() + "/" + tsname);
@@ -39,7 +40,7 @@ int main(int argc, char *argv[])
 	if (!ok)
 		return 1;
 	
-	ok = OpenDb();
+	ok = OpenDb(dbname);
 	if (!ok)
 		return 1;
 	
