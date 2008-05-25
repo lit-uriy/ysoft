@@ -4,6 +4,7 @@
  */
 
 #include <QtGui>
+#include <QDomDocument>
 
 #include "mainwindow.h"
 
@@ -13,6 +14,7 @@ MainWindow::MainWindow()
 
   
 	child = new Child;
+	child->setSelectionMode(QAbstractItemView::ContiguousSelection);
 
 	setCentralWidget(child);
 	dirOpen = new QDir;
@@ -411,8 +413,7 @@ void MainWindow::SlotOpenDir()
   QFileDialog::Options	options;
   QString				caption;
   QString				dir;
-  QString				filter;
-  QString				selectedFilter;
+
 	
 	
 	options = QFileDialog::DontResolveSymlinks | QFileDialog::ShowDirsOnly;
@@ -496,18 +497,22 @@ void MainWindow::SlotOpenDb()
 //	Файл->Открыть TS-файл	
 void MainWindow::SlotOpenTs()
 {
-/*
+
   QFileDialog::Options	options;
-  QString				caption;
-  QString				dir;
-  QString				filter;
-  QString				selectedFilter;
+  
+  QString	caption;
+  QString	dir;
+  QString	filter;
+  QString	selectedFilter;
+  QFile		file;
 	
 	
-	options = QFileDialog::DontResolveSymlinks | QFileDialog::ShowDirsOnly;
+	filter = tr("TS files (*.ts)");
+	//selectedFilter = 
+	//options = QFileDialog::DontResolveSymlinks | QFileDialog::ShowDirsOnly;
 	//options |= QFileDialog::DontUseNativeDialog;
 	
-	caption = tr("QFileDialog::getExistingDirectory()");
+	caption = tr("QFileDialog::getOpenFileName()");
 	
 	if (dirOpen->path().isEmpty())
 	{
@@ -518,24 +523,31 @@ void MainWindow::SlotOpenTs()
 		dir = dirOpen->path();
 	}
 	
-	QString dirname = QFileDialog::getExistingDirectory(this,
+	QString filename = QFileDialog::getOpenFileName(this,
 							 caption,
 							 dir,
-							 options);
+							 filter/*,
+							 selectedFilter,
+							 options*/);
 	
-	if (!dirname.isEmpty())
+	file.setFileName(filename);
+	file.open( QIODevice::ReadOnly);
+	
+	if (!filename.isEmpty())
 	{
 		//QMessageBox::information(this, tr("Информация"), tr("Каталог пуст"));
-		dirOpen->setPath(dirname);
-		statusBar()->showMessage(dirname);
-		ReadFiles();
+		//dirOpen->setPath(dirname);
+		statusBar()->showMessage(filename);
+		ReadTsFile(&file);
 	}
 	else
 	{
 		statusBar()->showMessage(tr("Готов"));
 	}
-*/	
+	
+	file.close();
 }
+
 
 
 /*
@@ -611,6 +623,44 @@ void MainWindow::ReadFilesFromDir()
 	
 	child->clear();
 	child->addItems(filelist);
+}
+
+/*=====================================================================
+				Чтение TS-файла
+  ===================================================================*/
+void MainWindow::ReadTsFile(QFile *tsfile)
+{
+    QStringList list;
+
+    QString errorStr;
+    int errorLine;
+    int errorColumn;
+    QDomDocument doc;
+    if (!doc.setContent( tsfile, true, &errorStr, &errorLine, &errorColumn)) 
+    {
+		//qDebug() << "Parse 2 error at line " << errorLine << ", column " << errorColumn << ":\n" << errorStr;
+        return;
+    }
+
+    QDomElement root = doc.firstChildElement("TS");
+    QDomElement context = root.firstChildElement("context");
+    QString szValue = context.nodeValue();
+	//QString szValue = context.text();
+//	int cnt=0;
+    for(; !context.isNull(); context = context.nextSiblingElement("context")) 
+    {
+        QDomElement name = context.firstChildElement( "name");
+        QString szName = name.nodeName();
+        //QString szValue = name.nodeValue();
+		QString szValue = name.text();
+        list.append( szValue);
+
+        //qDebug( "%s=%s", qPrintable( szName), qPrintable( szValue));
+		//qDebug() << cnt++ << ": " << szName << "=" << szValue;
+    } 
+	//qDebug() << "End of element's list";
+    child->clear();
+	child->addItems(list);
 }
 
 /*=====================================================================

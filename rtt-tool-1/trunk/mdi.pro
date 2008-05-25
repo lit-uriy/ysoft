@@ -7,4 +7,4 @@ SOURCES       = main.cpp \
 
 RESOURCES     = mdi.qrc
 
-
+QT      += xml

@@ -17,6 +17,8 @@ class QMdiSubWindow;
 class MdiChild;
 class QSignalMapper;
 class QDir;
+class QStringList;
+class QFile;
 
 
 
@@ -71,6 +73,7 @@ private:
     void writeSettings();
 */
 	void ReadFilesFromDir();
+	void ReadTsFile(QFile *tsfile);
 
 	Child	*child;
 /*	
