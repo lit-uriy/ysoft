@@ -1,10 +1,10 @@
 TEMPLATE	= app
-#QT		+= xml
+QT		+= xml
 CONFIG		+= console
 
 SOURCES		= main.cpp
 
 #SOURCES		+= domparser.cpp
-#HEADERS		+= domparser.h
+HEADERS		+= uireader.h
 
 

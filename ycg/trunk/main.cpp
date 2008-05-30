@@ -15,7 +15,7 @@
 #include <QTextCodec>
 #include <iostream>
 
-//#include "domparser.h"
+#include "uireader.h"
 /*
 #define VERSION_MAJOR	0
 #define VERSION_MINOR	1
@@ -52,8 +52,10 @@ void showHelp(const char *appName)
 int main(int argc, char *argv[])
 {
   int arg = 1;
-  const char *fileName = 0;
-
+  QString	filename;
+  QString	classname;
+  QString	parentname;
+  
 	while (arg < argc) 
 	{
         QString opt = QString::fromLocal8Bit(argv[arg]);
@@ -73,8 +75,9 @@ int main(int argc, char *argv[])
         }
 		else if (rx.exactMatch(opt))
 		{
-			qDebug() << "Parametr         : " << opt << "\n\r";
-			
+			qDebug() << "Parametr : " << opt << "\n\r";
+			filename = opt;
+			break;
             //driver.option().dependencies = true;
         }/*
 		else if (opt == QLatin1String("-o") || opt == QLatin1String("-output"))
@@ -149,8 +152,13 @@ int main(int argc, char *argv[])
 	} 
 
   QCoreApplication app(argc, argv);
-  //QStringList	args = app.arguments();
-  //QString		arg;
+
+	if (!GetClassName(filename, classname, parentname))
+	{
+		qDebug() << "Error in GetClassName";
+		return 1;
+	}
+	
 
 	
 
