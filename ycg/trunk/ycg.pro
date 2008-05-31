@@ -5,6 +5,7 @@ CONFIG		+= console
 SOURCES		= main.cpp
 
 #SOURCES		+= domparser.cpp
-HEADERS		+= uireader.h
+HEADERS		+=	uireader.h \
+				codegenerator.h
 
-
+RESOURCES += ycg.qrc

@@ -7,7 +7,7 @@
 
 
 //=====================================================
-//		Получим список секций ts-файла
+//		
 //=====================================================
 bool GetClassName(const QString &filename, QString &classname, QString &parentname)
 {
@@ -19,7 +19,7 @@ bool GetClassName(const QString &filename, QString &classname, QString &parentna
 
   QDomDocument	doc;
   
-	qDebug() << uifile.fileName() << "\n\r";
+	qDebug() << "UI file: " << uifile.fileName() << "\n\r";
 	if (!uifile.exists())
 		return ok;
 	
@@ -36,8 +36,8 @@ bool GetClassName(const QString &filename, QString &classname, QString &parentna
 		if (parentname.isNull() || classname.isNull())
 			ok = false;
 		
-		qDebug() << "classname: " << classname << "\n\r";
-		qDebug() << "parentname: " << parentname << "\n\r";
+		qDebug() << "UI file classname: " << classname << "\n\r";
+		qDebug() << "UI file parentname: " << parentname << "\n\r";
 		
     }
 	else
