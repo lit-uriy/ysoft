@@ -19,9 +19,11 @@ bool GetClassName(const QString &filename, QString &classname, QString &parentna
 
   QDomDocument	doc;
   
-	qDebug() << "UI file: " << uifile.fileName() << "\n\r";
 	if (!uifile.exists())
+	{
+		qDebug() << "UI file: " << uifile.fileName() << "is absent" << "\n\r";
 		return ok;
+	}
 	
 	uifile.open( QIODevice::ReadOnly);
 	
@@ -36,8 +38,8 @@ bool GetClassName(const QString &filename, QString &classname, QString &parentna
 		if (parentname.isNull() || classname.isNull())
 			ok = false;
 		
-		qDebug() << "UI file classname: " << classname << "\n\r";
-		qDebug() << "UI file parentname: " << parentname << "\n\r";
+		//qDebug() << "UI file classname: " << classname << "\n\r";
+		//qDebug() << "UI file parentname: " << parentname << "\n\r";
 		
     }
 	else

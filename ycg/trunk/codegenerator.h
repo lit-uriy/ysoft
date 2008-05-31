@@ -28,21 +28,24 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
 
 	// Преобразуем имя файла из *.ui в *
 	path = fi.dir().absolutePath();	
-	qDebug() << "File path: " << path << "\n\r";	
+	//qDebug() << "File path: " << path << "\n\r";	
 	clrname = fi.completeBaseName();
-	qDebug() << "File name: " << clrname << "\n\r";
+	//qDebug() << "File name: " << clrname << "\n\r";
 
 
 // Генерируем файл реализации
 	outname = clrname + ".cpp";
-	qDebug() << "File outname: " << outname << "\n\r";
+	//qDebug() << "File outname: " << outname << "\n\r";
 	outfullname = path + QDir::separator () + outname;
 	
 	// Открываем файл шаблона
 	templatefile.setFileName(":/res/[uiclassname].cpp");
 	ok = templatefile.open(QIODevice::ReadOnly);
 	if (!ok)
+	{
+		qDebug() << "Error opening tamplate" << "\n\r";
 		return ok;
+	}
 
 	stream.setDevice(&templatefile);
 
@@ -93,20 +96,22 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
 
 // Генерируем файл интерфейса
 	outname = clrname + ".h";
-	qDebug() << "File outname: " << outname << "\n\r";
+	//qDebug() << "File outname: " << outname << "\n\r";
 	outfullname = path + QDir::separator () + outname;
 	
 	// Открываем файл шаблона
 	templatefile.setFileName(":/res/[uiclassname].h");
 	ok = templatefile.open(QIODevice::ReadOnly);
 	if (!ok)
+	{
+		qDebug() << "Error opening tamplate" << "\n\r";
 		return ok;
+	}
 
 	stream.setDevice(&templatefile);
 
 	// Читаем файл шаблона
 	text = stream.readAll();
-	qDebug() << text;
 
 	if (stream.status() != QTextStream::Ok)
 	{
@@ -125,7 +130,7 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
 	text.replace("[ClassName]", classname);
 		// Имя родительского класса
 	text.replace("[ParentClass]", parentname);
-	qDebug() << text << "\n\r";
+	//qDebug() << text << "\n\r";
 	
 	// Создаем файл реализации
 	outfile.setFileName(outfullname);
@@ -145,11 +150,12 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
 	stream.setDevice(&outfile);
 	stream << text;
 	outfile.close();
+
 	if (stream.status() != QTextStream::Ok)
 	{
 		ok = false;
 		qDebug() << "Error writing output" << "\n\r";
-	}	
+	}
 
     return ok;
 }

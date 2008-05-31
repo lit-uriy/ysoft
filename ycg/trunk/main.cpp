@@ -26,6 +26,8 @@ void showHelp(const char *appName)
     fprintf(stderr, "Yurik's Code Generator %s\n", SW_VERSION);
 
     fprintf(stderr, "Usage: %s [options] <file.ui>\n\n"
+			"This program generates two files file.cpp and file.h\n"
+			" for use Qt Designer file.ui with the multiple inheritance approach.\n\n"
             "  -h, --help                display this help and exit\n"
             "  -v, --version             display version\n"
             "\n", appName);
@@ -33,13 +35,14 @@ void showHelp(const char *appName)
 
 int main(int argc, char *argv[])
 {
-  int arg = 1;
+  int arg = 0;
   QString	filename;
   QString	classname;
   QString	parentname;
   
 	while (arg < argc) 
 	{
+        ++arg;	
         QString opt = QString::fromLocal8Bit(argv[arg]);
 		QRegExp rx("*.ui");
 		rx.setPatternSyntax(QRegExp::Wildcard);
@@ -66,7 +69,6 @@ int main(int argc, char *argv[])
             showHelp(argv[0]);
             return 1;
         }
-        ++arg;		
 	} 
 
   QCoreApplication app(argc, argv);
@@ -77,11 +79,11 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 	
-	GenerateCode(filename, classname, parentname);
-
-	
-
-
+	if(!GenerateCode(filename, classname, parentname))
+	{
+		qDebug() << "Error in GenerateCode";
+		return 1;
+	}
 	
     return 0;
 }
