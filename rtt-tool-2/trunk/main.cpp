@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 	{
 		tsname = pair.first;
 		component = pair.second;
-		
+		list.clear();
 		// 
 		tsfile.setFileName(tsdir.absolutePath() + "/" + tsname);
 		qDebug() << "TS File: " << tsfile.fileName() << "\n\r";

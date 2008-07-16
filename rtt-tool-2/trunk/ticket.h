@@ -54,7 +54,7 @@ bool CreateTickets(QStringList list, QString component, QString milestone, QStri
 		return ok;
     } 
 	t_time = query.value(0).toInt();
-	t_changetime = t_time;
+	
 	
 	qDebug() << "Max time = "  << t_time << "\n\r";
 	
@@ -121,6 +121,7 @@ bool CreateTickets(QStringList list, QString component, QString milestone, QStri
 		
 		t_summary = tr("секция ") + section;
 		t_description = tr("перевод секции ") + section + tr(" в файле ") + filename;
+		t_changetime = t_time;
 		
 		query.bindValue(":type", t_type);
 		query.bindValue(":time", t_time);
@@ -149,46 +150,8 @@ bool CreateTickets(QStringList list, QString component, QString milestone, QStri
 		{
 			qDebug() << "Ok: " << "\n\r";
 		}
+		t_time += 10;
 	}
 	return ok;
 }
-/*
-INSERT INTO ticket VALUES(11,'задача',1210408131,1210408131,'Qt Designer','обычный','обычный','lit-uriy','lit-uriy','',NULL,'Перевод TS-файлов','new',NULL,'секция PluginDialog','перевод секции PluginDialog в файле designer_ru.ts','');
 
-
-t_type
-t_time
-t_changetime
-t_component
-t_severity
-t_priority
-t_owner
-t_reporter
-t_cc
-t_version
-t_milestone
-t_status
-t_resolution
-t_summary
-t_description
-t_keywords
-
-
-id
-type
-time
-changetime
-component
-severity
-priority
-owner
-reporter
-cc
-version
-milestone
-status
-resolution
-summary
-description
-keywords
-*/
