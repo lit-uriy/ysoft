@@ -17,7 +17,7 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
   QFile		uifile(uifilename);
   QFileInfo fi(uifilename);
   QString	text;
-  QString	clrname;	// чистое имя, без расширения
+  QString	clrname;	// С‡РёСЃС‚РѕРµ РёРјСЏ, Р±РµР· СЂР°СЃС€РёСЂРµРЅРёСЏ
   QString	outname;
   QString	outfullname;
   QString	path;
@@ -26,19 +26,19 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
   QTextStream	stream;
 
 
-	// Преобразуем имя файла из *.ui в *
+	// РџСЂРµРѕР±СЂР°Р·СѓРµРј РёРјСЏ С„Р°Р№Р»Р° РёР· *.ui РІ *
 	path = fi.dir().absolutePath();	
 	//qDebug() << "File path: " << path << "\n\r";	
 	clrname = fi.completeBaseName();
 	//qDebug() << "File name: " << clrname << "\n\r";
 
 
-// Генерируем файл реализации
+// Р“РµРЅРµСЂРёСЂСѓРµРј С„Р°Р№Р» СЂРµР°Р»РёР·Р°С†РёРё
 	outname = clrname + ".cpp";
 	//qDebug() << "File outname: " << outname << "\n\r";
 	outfullname = path + QDir::separator () + outname;
 	
-	// Открываем файл шаблона
+	// РћС‚РєСЂС‹РІР°РµРј С„Р°Р№Р» С€Р°Р±Р»РѕРЅР°
 	templatefile.setFileName(":/res/[uiclassname].cpp");
 	ok = templatefile.open(QIODevice::ReadOnly);
 	if (!ok)
@@ -49,7 +49,7 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
 
 	stream.setDevice(&templatefile);
 
-	// Читаем файл шаблона
+	// Р§РёС‚Р°РµРј С„Р°Р№Р» С€Р°Р±Р»РѕРЅР°
 	text = stream.readAll();
 	
 
@@ -61,16 +61,16 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
 	
 	templatefile.close();
 	
-	// Заменяем строки в шаблоне
-		// имя файла
+	// Р—Р°РјРµРЅСЏРµРј СЃС‚СЂРѕРєРё РІ С€Р°Р±Р»РѕРЅРµ
+		// РёРјСЏ С„Р°Р№Р»Р°
 	text.replace("[classname]", clrname);
-		// Имя класса
+		// РРјСЏ РєР»Р°СЃСЃР°
 	text.replace("[ClassName]", classname);
-		// Имя родительского класса
+		// РРјСЏ СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	text.replace("[ParentClass]", parentname);
 	
 	
-	// Создаем файл реализации
+	// РЎРѕР·РґР°РµРј С„Р°Р№Р» СЂРµР°Р»РёР·Р°С†РёРё
 	outfile.setFileName(outfullname);
 	if (outfile.exists())
 	{
@@ -84,7 +84,7 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
 		qDebug() << "Error open file";
 		return ok;
 	}
-	// Зписываем скорректированный шаблон в выходной файл
+	// Р—РїРёСЃС‹РІР°РµРј СЃРєРѕСЂСЂРµРєС‚РёСЂРѕРІР°РЅРЅС‹Р№ С€Р°Р±Р»РѕРЅ РІ РІС‹С…РѕРґРЅРѕР№ С„Р°Р№Р»
 	stream.setDevice(&outfile);
 	stream << text;
 	outfile.close();
@@ -94,12 +94,12 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
 		qDebug() << "Error writing output" << "\n\r";
 	}	
 
-// Генерируем файл интерфейса
+// Р“РµРЅРµСЂРёСЂСѓРµРј С„Р°Р№Р» РёРЅС‚РµСЂС„РµР№СЃР°
 	outname = clrname + ".h";
 	//qDebug() << "File outname: " << outname << "\n\r";
 	outfullname = path + QDir::separator () + outname;
 	
-	// Открываем файл шаблона
+	// РћС‚РєСЂС‹РІР°РµРј С„Р°Р№Р» С€Р°Р±Р»РѕРЅР°
 	templatefile.setFileName(":/res/[uiclassname].h");
 	ok = templatefile.open(QIODevice::ReadOnly);
 	if (!ok)
@@ -110,7 +110,7 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
 
 	stream.setDevice(&templatefile);
 
-	// Читаем файл шаблона
+	// Р§РёС‚Р°РµРј С„Р°Р№Р» С€Р°Р±Р»РѕРЅР°
 	text = stream.readAll();
 
 	if (stream.status() != QTextStream::Ok)
@@ -121,18 +121,18 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
 	
 	templatefile.close();
 	
-	// Заменяем строки в шаблоне
-		// имя файла
+	// Р—Р°РјРµРЅСЏРµРј СЃС‚СЂРѕРєРё РІ С€Р°Р±Р»РѕРЅРµ
+		// РёРјСЏ С„Р°Р№Р»Р°
 	text.replace("[classname]", clrname);
 		// define
 	text.replace("[CLASSNAME]", clrname.toUpper());	
-		// Имя класса
+		// РРјСЏ РєР»Р°СЃСЃР°
 	text.replace("[ClassName]", classname);
-		// Имя родительского класса
+		// РРјСЏ СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєР»Р°СЃСЃР°
 	text.replace("[ParentClass]", parentname);
 	//qDebug() << text << "\n\r";
 	
-	// Создаем файл реализации
+	// РЎРѕР·РґР°РµРј С„Р°Р№Р» СЂРµР°Р»РёР·Р°С†РёРё
 	outfile.setFileName(outfullname);
 	if (outfile.exists())
 	{
@@ -146,7 +146,7 @@ bool GenerateCode(const QString &uifilename, const QString &classname, const QSt
 		qDebug() << "Error open file";
 		return ok;
 	}
-	// Зписываем скорректированный шаблон в выходной файл
+	// Р—РїРёСЃС‹РІР°РµРј СЃРєРѕСЂСЂРµРєС‚РёСЂРѕРІР°РЅРЅС‹Р№ С€Р°Р±Р»РѕРЅ РІ РІС‹С…РѕРґРЅРѕР№ С„Р°Р№Р»
 	stream.setDevice(&outfile);
 	stream << text;
 	outfile.close();
