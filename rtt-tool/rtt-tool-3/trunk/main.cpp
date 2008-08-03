@@ -1,9 +1,8 @@
 /*!
  \file	main.cpp
- \brief Программа перекодировки текстовых файлов (*.h и *.cpp) из UI.
+ \brief Программа перекодировки текстовых файлов.
  
- Эта программа генерирует файлы исходников из файлов *.ui,
- используя множественное наследование классов.
+ Эта программа перекодирует текстовые файлы.
  */
 #include <QCoreApplication>
 #include <QDebug>
@@ -38,7 +37,7 @@ void showHelp(const char *appName)
 bool argparse(int argc, char *argv[], QMap<QString,QString> &dict)
 {
   int 			argcnt = 0;
-  int			i = 0;
+  int			i;
   QStringList	opts;  
   QStringList	list;
   
@@ -73,7 +72,7 @@ bool argparse(int argc, char *argv[], QMap<QString,QString> &dict)
 		QString str = opts.at(i);
 		qDebug() << "Parametr No" << i <<  "= " << opts.at(i) << "\t" ;
 		
-		if (str.contains("-s=")||str.contains("--source="))	// Входной файл
+		if (str.contains("-s=") || str.contains("--source="))	// Входной файл
 		{
 			list.clear();
 			list = str.split(QRegExp("[=,]"));
@@ -82,11 +81,11 @@ bool argparse(int argc, char *argv[], QMap<QString,QString> &dict)
 				showHelp(argv[0]);
 				return 1;
 			}
-			dict.insert("SrcFile", list.at(1));
+			dict.insert("SrcName", list.at(1));
 			dict.insert("SrcCodec", list.at(2));
 			qDebug() << list << "\n\r";
 		}
-		else if (str.contains("-d=")||str.contains("--destination="))	// Выходной файл
+		else if (str.contains("-d=") || str.contains("--destination="))	// Выходной файл
 		{
 			list.clear();
 			list = str.split(QRegExp("[=,]"));
@@ -95,7 +94,7 @@ bool argparse(int argc, char *argv[], QMap<QString,QString> &dict)
 				showHelp(argv[0]);
 				return 1;
 			}			
-			dict.insert("DstFile", list.at(1));
+			dict.insert("DstName", list.at(1));
 			dict.insert("DstCodec", list.at(2));
 			qDebug() << list << "\n\r";
 		}
@@ -117,7 +116,7 @@ int main(int argc, char *argv[])
 /*  QString		filename;
   QString		classname;
   QString		parentname;
-  QString		opt;*/
+  QString		opt;
   QFileInfo		fi;
   QMap<QString,QString> dict;  
   
@@ -127,40 +126,53 @@ int main(int argc, char *argv[])
 	{
 		return 1;
 	}
-	
-	QCoreApplication app(argc, argv);
+*/	
+	App app(argc, argv);
+	if (!app.isOk())
+        return 3;
     
+	app.parseCmdLine();
+	
+	app.validateArgs();
+	
+    if( app.displayHelp() )
+		return 1;
+	
 	// Проверим введенные параметры
-	if (!(dict.contains("SrcFile") && dict.contains("DstFile")))// все ли данные введены
+	if (!(dict.contains("SrcName") && dict.contains("DstName")))// все ли данные введены ?
 		return 1;
 	
-	fi.setFile(dict["SrcFile"]);
+	fi.setFile(dict["SrcName"]);
 	if (fi.isFile())
 	{
-		qDebug() << dict["SrcFile"] << " - is file" << "\n\r";
+		qDebug() << dict["SrcName"] << " - is file" << "\n\r";
+		dict.insert("SrcType", "file");
 	}
 	else if (fi.isDir())
 	{
-		qDebug() << dict["SrcFile"] << " - is dir" << "\n\r";
+		qDebug() << dict["SrcName"] << " - is dir" << "\n\r";
+		dict.insert("SrcType", "dir");
 	}
 	else
 	{
-		qDebug() << dict["SrcFile"] << " - is not file or dir" << "\n\r";
+		qDebug() << dict["SrcName"] << " - is not file or dir" << "\n\r";
 		return 1;
 	}
 	
-	fi.setFile(dict["DstFile"]);
+	fi.setFile(dict["DstName"]);
 	if (fi.isFile())
 	{
-		qDebug() << dict["DstFile"] << " - is file" << "\n\r";
+		qDebug() << dict["DstName"] << " - is file" << "\n\r";
+		dict.insert("DstType", "dir");
 	}
 	else if (fi.isDir())
 	{
-		qDebug() << dict["DstFile"] << " - is dir" << "\n\r";
+		qDebug() << dict["DstName"] << " - is dir" << "\n\r";
+		dict.insert("DstType", "dir");
 	}
 	else
 	{
-		qDebug() << dict["DstFile"] << " - is not file or dir" << "\n\r";
+		qDebug() << dict["DstName"] << " - is not file or dir" << "\n\r";
 		return 1;
 	}	
 
