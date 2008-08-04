@@ -6,36 +6,32 @@
 
 
 
-#include <QDate>
-#include <qdir.h>
-#include <qtemporaryfile.h>
-#include <qstack.h>
-#include <qdebug.h>
-#include <qfileinfo.h>
-#include <qtextstream.h>
-#include <qregexp.h>
-#include <qhash.h>
+#include <QtCore>
 
-App::Configure( int& argc, char** argv )
+
+
+App::App( int& argc, char** argv )
 {
-	dict["CONFIGCMD"] = argv[ 0 ];
+  int i;
+
+	dict["CMD"] = argv[ 0 ];
 
 	for ( i = 1; i < argc; i++ )
 		opts += argv[ i ];
 }
 
-App::~Configure()
+//----------------------------------------------------------------------------------
+App::~App()
 {
 }
 
 
-/*
-
- */
-void App::parseCmdLine()
+//----------------------------------------------------------------------------------
+void App::ParseCmdLine()
 {
-	int argcnt = opts.size();
-	int i = 0;
+  int 			argcnt = opts.size();
+  int 			i = 0;
+  QStringList	list;
 	
 	dict["EXIT"] = "no";
 	
@@ -49,15 +45,16 @@ void App::parseCmdLine()
 	{
 		dict["HELP"] = "yes";
 		dict["EXIT"] = "yes";
-		return 0;
+		return;
 	}
 	else if (opts.contains("-v") || opts.contains("--version"))
 	{
+		dict["HELP"] = "no";
 		dict["EXIT"] = "yes";
-		fprintf(stderr, "File reencodder %s\n", SW_VERSION);
-		return 0;
+		return;
 	}
 	
+	// Проверяем остальные аргументы
 	i = 0;
 	while (i < argcnt) 
 	{
@@ -70,11 +67,12 @@ void App::parseCmdLine()
 			list = str.split(QRegExp("[=,]"));
 			if (list.size() < 3)
 			{
-				showHelp(argv[0]);
-				return 1;
+				dict["EXIT"] = "error";
+				fprintf(stderr, "Too few args\n");
+				return;
 			}
-			dict.insert("SrcName", list.at(1));
-			dict.insert("SrcCodec", list.at(2));
+			dict["SrcName"] = list.at(1);
+			dict["SrcCodec"] = list.at(2);
 			qDebug() << list << "\n\r";
 		}
 		else if (str.contains("-d") || str.contains("--destination"))	// Выходной файл
@@ -83,75 +81,128 @@ void App::parseCmdLine()
 			list = str.split(QRegExp("[=,]"));
 			if (list.size() < 3)
 			{
-				showHelp(argv[0]);
-				return 1;
+				dict["EXIT"] = "error";
+				fprintf(stderr, "Too few args\n");
+				return;
 			}			
-			dict.insert("DstName", list.at(1));
-			dict.insert("DstCodec", list.at(2));
+			dict["DstName"] = list.at(1);
+			dict["DstCodec"] = list.at(2);
 			qDebug() << list << "\n\r";
 		}
 		else
 		{
-            showHelp(argv[0]);
-            return 1;
+			dict["EXIT"] = "error";
+			fprintf(stderr, "Unknown args\n");
+			return;
         }
 		i++;
 	} 	
 }
 
-
-void App::validateArgs()
+//----------------------------------------------------------------------------------
+bool App::IsGoodArgs()
 {
-	QStringList configs;
-	// Validate the specified config
-
-	allConfigs = QStringList() << "minimal" << "small" <<  "medium" << "large" << "full";
-
-	QStringList::Iterator config;
-	for ( config = allConfigs.begin(); config != allConfigs.end(); ++config )
+  QFileInfo	fis;
+  QFileInfo	fid;
+  bool		ok = false;
+  
+	if (dict["EXIT"] == "error")
 	{
-		configs += (*config) + "-config";
-		if ( (*config) == dictionary[ "QCONFIG" ] )
-			break;
+		DisplayHelp();
+		return ok;
 	}
-	if ( config == allConfigs.end() )
+
+	
+	// Проверим остальные аргументы
+	
+	if (dict.contains("SrcName") && dict.contains("DstName"))// все ли данные введены ?
 	{
-		dictionary[ "HELP" ] = "yes";
-		cout << "No such configuration \"" << qPrintable(dictionary[ "QCONFIG" ]) << "\"" << endl ;
+		fis.setFile(dict["SrcName"]);
+		fid.setFile(dict["DstName"]);
+		
+		if (fis.isFile())
+		{
+			qDebug() << dict["SrcName"] << " - is file" << "\n\r";
+			dict.insert("SrcType", "file");
+			
+			if (!fid.isFile())
+			{
+				qDebug() << "both source and destination must be file or dir" << "\n\r";
+			}
+			else
+			{
+				ok = true;
+			}
+		}
+		else if (fis.isDir())
+		{
+			qDebug() << dict["SrcName"] << " - is dir" << "\n\r";
+			dict.insert("SrcType", "dir");
+			
+			if (!fid.isDir())
+			{
+				qDebug() << "both source and destination must be file or dir" << "\n\r";
+			}
+			else
+			{
+				ok = true;
+			}		
+		}
+		else 
+		{
+			qDebug() << dict["SrcName"] << " - is not file or dir" << "\n\r";
+		}
 	}
 	else
-		qmakeConfig += configs;
-}
-
-
-bool App::displayHelp()
-{
-	if ( dictionary[ "HELP" ] == "yes" )
 	{
-		fprintf(stderr, "File reencodder %s\n"
-						"This program reencoded text files\n\n", SW_VERSION);
-		
-		fprintf(stderr, "Usage: %s options\n\n"
-						"  -h, --help                      Display this help and exit.\n"
-						"  -v, --version                   Display version.\n"
-						"  -s, --source=<file,codec>       Input file and codec.\n"
-						"  -d, --destination=<file,codec>  Output file and codec.\n"
-						"\n", appName);
-		
-		return true;
+		fprintf(stderr, "Too few args\n");
 	}
-	return false;
+	
+	if (!ok)
+		DisplayHelp();
+
+	return ok;
 }
 
-
-
-bool App::isDone()
+//----------------------------------------------------------------------------------
+void App::DisplayHelp()
 {
-	return !dictionary["DONE"].isEmpty();
+
+	fprintf(stderr, "\nFile reencodder %s\n"
+					"This program reencoded text files\n\n", SW_VERSION);
+	
+	fprintf(stderr, "Usage: %s options\n\n"
+					"  -h, --help                      Display this help and exit.\n"
+					"  -v, --version                   Display version.\n"
+					"  -s, --source=<file,codec>       Input file and codec.\n"
+					"  -d, --destination=<file,codec>  Output file and codec.\n"
+					"\n", qPrintable(dict["CMD"]));
+
 }
 
-bool App::isOk()
+//----------------------------------------------------------------------------------
+void App::DisplayRev()
 {
-	return (dictionary[ "DONE" ] != "error");
+	fprintf(stderr, "File reencodder %s\n", SW_VERSION);
 }
+
+//----------------------------------------------------------------------------------
+bool App::IsReqInfo()
+{
+	if (dict["EXIT"] == "yes")
+	{
+		if (dict["HELP"] == "yes")
+		{
+			DisplayHelp();
+		}
+		else
+		{
+			DisplayRev();
+		}
+		return 1;
+	}
+	
+	return 0;
+}
+
 
