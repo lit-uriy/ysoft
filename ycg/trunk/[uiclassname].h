@@ -7,10 +7,7 @@
 
 #include "ui_[classname].h"
 
-/*!
- *	\class [ClassName]
- *	\brief Класс [ClassName].
- * 
+/**	Класс [ClassName] является ... .
  * 	Этот класс ...
  */
 class [ClassName] : public [ParentClass], public Ui::[ClassName]
@@ -18,7 +15,7 @@ class [ClassName] : public [ParentClass], public Ui::[ClassName]
     Q_OBJECT
 
 public:
-    [ClassName]([ParentClass] *p_parent = 0);
+    [ClassName](QWidget *p_parent = 0);
 
 
 
