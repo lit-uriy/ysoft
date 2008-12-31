@@ -29,24 +29,32 @@
 class TextEdit : public QFrame {
 	Q_OBJECT
 	Q_PROPERTY(bool partOfProject READ isPartOfProject WRITE setInProject);
+	
 public:
 	TextEdit(QWidget *parent=0);
 	virtual ~TextEdit();
+	
 public:
 	QsciScintilla *pEditor() const;
 	void setInProject(bool is);
 	bool isPartOfProject() const;
 	void setupDefaultLexer();
 	QsciLexerCPP *pLexer() const;
+	void loadApi();
+	
 private:
 	//TabWidget* mwidget;
-	bool isInProject;
-	QsciLexerCPP *lexer;
-	QsciScintilla *editor;
+	bool			isInProject;
+	QsciLexerCPP	*lexer;
+	QsciScintilla	*editor;
+	QsciAPIs		*api;
+	
 private slots:
 	void slotTextChanged();
+	
 public slots:
 	void setupDefaults();
+	
 signals:
 	void wasModified(int index);
 };

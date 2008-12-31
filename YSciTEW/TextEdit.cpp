@@ -145,7 +145,25 @@ QsciScintilla* TextEdit::pEditor() const
 }
 
 
+void TextEdit::loadApi()
+{
 
+	QDir dir(QApplication::applicationDirPath());
+	dir.cd("apis");
+	qDebug() << "Absolute path of APIs directory: " + dir.absolutePath();
+	QStringList lst = dir.entryList();
+	qDebug() << "Loading APIs...";
+	foreach(QString api_path, lst) {
+		if(api_path!="." && api_path!="..") {
+			api->load(dir.absolutePath() + "/" + api_path);
+			qDebug() << "Current loaded API: " << api_path;
+		}
+	}
+	qDebug() << "Preparing APIs...";
+	api->prepare();
+	//delete label;
+	qDebug() << "API prepared!";
+}
 
 
 
