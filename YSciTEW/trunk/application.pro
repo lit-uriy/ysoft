@@ -2,11 +2,11 @@ TARGET		  = qscite
 TAMPLATE	  = app
 
 
-HEADERS       = TextEdit.h
-#HEADERS      += TextEdit.h
+HEADERS       = yscitew.h \
+				mainwindow.h
 
-SOURCES       = TextEdit.cpp
-#SOURCES      += TextEdit.cpp
+SOURCES       = yscitew.cpp \
+				mainwindow.cpp
 
 SOURCES      += main.cpp
 				

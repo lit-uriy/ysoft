@@ -21,8 +21,8 @@
 
 #include <QApplication>
 
-//#include "mainwindow.h"
-#include "TextEdit.h"
+#include "mainwindow.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -30,9 +30,8 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
 	
-    //MainWindow mainWin;
-	TextEdit mainWin;
-	mainWin.resize(500,500);
+    MainWindow mainWin;
+
     mainWin.show();
     return app.exec();
 }
