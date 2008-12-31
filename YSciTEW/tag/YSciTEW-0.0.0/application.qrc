@@ -1,0 +1,30 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>./res/images/copy.png</file>
+    <file>./res/images/cut.png</file>
+    <file>./res/images/new.png</file>
+    <file>./res/images/open.png</file>
+    <file>./res/images/paste.png</file>
+    <file>./res/images/save.png</file>
+    <file>./res/images/closetab.png</file>
+    <file>./res/images/closetab_light.png</file>
+    <file>./res/images/closetab_dark.png</file>
+    <file>./res/images/console.png</file>
+    <file>./res/images/linux.png</file>
+    <file>./res/images/pwindows.png</file>
+    <file>./res/images/mac.png</file>
+    <file>./res/fonts/COURI.TTF</file>
+    <file>./res/images/22x22/function.png</file>
+    <file>./res/images/22x22/class.png</file>
+    <file>./res/images/22x22/enum.png</file>
+    <file>./res/images/22x22/enumerator.png</file>
+    <file>./res/images/22x22/macro.png</file>
+    <file>./res/images/22x22/member.png</file>
+    <file>./res/images/22x22/namespace.png</file>
+    <file>./res/images/22x22/struct.png</file>
+    <file>./res/images/22x22/typedef.png</file>
+    <file>./res/images/22x22/prototype.png</file>
+    <file>./res/images/22x22/variable.png</file>
+    <file>./res/images/22x22/anonimous.png</file>	
+</qresource>
+</RCC>
