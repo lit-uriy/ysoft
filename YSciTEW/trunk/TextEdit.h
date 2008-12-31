@@ -24,6 +24,7 @@
 
 #include <Qsci/qsciscintilla.h>
 #include <Qsci/qscilexercpp.h>
+#include <Qsci/qsciapis.h>
 
 //class TabWidget;
 class TextEdit : public QFrame {
