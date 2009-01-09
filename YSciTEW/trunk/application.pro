@@ -1,4 +1,4 @@
-TARGET		  = qscite
+TARGET		  = yscitew
 TAMPLATE	  = app
 
 
@@ -14,12 +14,13 @@ RESOURCES     = application.qrc
 
 #	  --- External ---
 
-USELIBDIR       = D:/libs/QScintilla-gpl-2.3
+USELIBDIR       = D:/libs/QScintilla-gpl-2.3p1_static/QScintilla
 include($$USELIBDIR/qscintilla.pri)
 
 
 #=========== Yura Config ================
-CONFIG += debug_and_release build_all
+#CONFIG += debug_and_release build_all
+CONFIG  	+= release
 
 	DESTDIR     = ./build
 	OBJECTS_DIR = ./build/obj
