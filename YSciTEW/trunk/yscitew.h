@@ -6,7 +6,7 @@
 
 #include <QFrame>
 
-#include <Qsci/qsciscintilla.h>
+#include <QsciScintilla>
 
 //#include <Qsci/qsciapis.h>
 

@@ -3,7 +3,7 @@
  */
 #include "yscitew.h"
 
-#include <Qsci/qscilexercpp.h>
+#include <QsciLexerCPP>
 #include <QtGui>
 
 YSciTEW::YSciTEW(QWidget* parent): QsciScintilla(parent)
