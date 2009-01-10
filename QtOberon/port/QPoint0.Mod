@@ -25,7 +25,7 @@ QDataStream & operator>> ( QDataStream & stream, QPoint & point )
 MODULE QPoint0 {OVERLOADING};
 
 IMPORT
-	QGlobal0 (* - qRound(),  *);
+	KernelLog, QGlobal0;
 
 (** Объект QPoint описывает точку на плоскости с целочисленными координатами.
 
@@ -168,9 +168,9 @@ TYPE
 					p, q : QPoint;
 				BEGIN
 					NEW(p, 3, 7);
-					NEW(q, -1, 4);
-					p = p * 4;    // p станет (12, 28)
-					q = q * 2.3;  // q станет (-2, 9) 
+					NEW(q, -3, 10);
+					p.mul(4);    // p станет (12, 28)
+					q.mul(2.3);  // q станет (-7, 23) 
 				END;
 			\endcode
 			Заметьте, что результат округляется к ближайшему целому, поскольку
@@ -204,7 +204,9 @@ TYPE
 		PROCEDURE div*(divisor : REAL); 
 		BEGIN 
 			SELF.x := QGlobal0.qRound(SELF.x / divisor);
+			KernelLog.String("Object SELF.x= "); KernelLog.Int(SELF.x,     0); KernelLog.Ln;
 			SELF.y := QGlobal0.qRound(SELF.y / divisor);
+			KernelLog.String("Object SELFyx= "); KernelLog.Int(SELF.y,     0); KernelLog.Ln;
 		END div;
 		
 	END QPoint;
@@ -327,7 +329,14 @@ END "/";
 
 (* Тело модуля *)
 BEGIN
+	KernelLog.String("Modul QPoint0 loded"); KernelLog.Ln;
 END QPoint0.
+
+
+SystemTools.Free QPoint0~
+
+QPoint0.Test ~
+
 
 
 (* помойка *)

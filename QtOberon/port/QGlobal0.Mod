@@ -1,9 +1,9 @@
-(** В этом модуле реализован порт файла(ов) global.{h|cpp} библиотеки
-	\link{Qt4}{http://trolltech.com/products/} на язык Active Oberon.
-	\ver 0.0.0 (нулевая) версия модуля. *)
+(**  ( global.{h|cpp} 
+	\link{Qt4}{http://trolltech.com/products/}  Active Oberon.
+	\ver 0.0.0 ()  *)
 
 (**
-	\todo проверить работу:
+	\todo  
 	\o qRound().
 	
 *)
@@ -44,7 +44,7 @@ inline qint64 qRound64(qreal d)
 
 (* *)
 BEGIN
-	KernelLog.String("Loding is ok "); KernelLog.Ln;
+	KernelLog.String("Modul QGlobal0 loded"); KernelLog.Ln;
 END QGlobal0.
 
 
