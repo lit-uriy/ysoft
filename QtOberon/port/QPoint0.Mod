@@ -22,7 +22,7 @@ QDataStream & operator>> ( QDataStream & stream, QPoint & point )
 	как и сравниваться}
 	
 *)
-MODULE QPoint0;
+MODULE QPoint0 {OVERLOADING};
 
 IMPORT
 	QGlobal0 (* - qRound(),  *);
@@ -61,7 +61,7 @@ TYPE
 	(** Объект QPoint -  точка на плоскости с целочисленными координатами.
 		\sa QPointF, QPolygon
 	*)
-	QPoint* = OBJECT;
+	QPoint* = OBJECT
 		VAR
 			(** Координаты точки \a x и \a y.*)		
 			x*, y*: INTEGER;
@@ -69,20 +69,20 @@ TYPE
 		(** Конструктор.
 			Конструирует пустую точку, т.е. с координатами (0, 0).
 			\sa isNull().
-		*)
+		
 		PROCEDURE &New;	
 		BEGIN
-			x = 0;
-			y = 0;
+			x := 0;
+			y := 0;
 		END New;
-		
+		*)
 		(** Конструктор.
 			Конструирует точку с заданными координатами (\a x, \a  y).
 		*)	
 		PROCEDURE &New(xpos, ypos :INTEGER);	
 		BEGIN
-			x = xpos;
-			y = ypos;		
+			x := xpos;
+			y := ypos;		
 		END New;
 		
 		(** Метод isNull.
@@ -91,7 +91,7 @@ TYPE
 		*)		
 		PROCEDURE isNull*():BOOLEAN;	
 		BEGIN
-			return (x = 0 && y = 0);		
+			RETURN ((x = 0) & (y = 0));		
 		END isNull;	
 		
 		(** "Манхэтэнская длинна".
@@ -112,8 +112,11 @@ TYPE
 		*)		
 		PROCEDURE manhattanLength*(): INTEGER; 
 		VAR
+			xt, yt : INTEGER;
 		BEGIN
-			return (qAbs(x) + qAbs(y));
+			xt := QGlobal0.qAbs(x);
+			yt := QGlobal0.qAbs(y);
+			RETURN (xt + yt);
 		END manhattanLength;
 		
 		(** Метод сложения.
@@ -132,8 +135,8 @@ TYPE
 		*)		
 		PROCEDURE add*(CONST point : QPoint); 
 		BEGIN 
-			SELF.x = SELF.x + point.x;
-			SELF.y = SELF.y + point.y;
+			SELF.x := SELF.x + point.x;
+			SELF.y := SELF.y + point.y;
 		END add;
 		
 		(** Метод вычитания.
@@ -152,8 +155,8 @@ TYPE
 		*)		
 		PROCEDURE sub*(CONST point : QPoint); 
 		BEGIN 
-			SELF.x = SELF.x - point.x;
-			SELF.y = SELF.y - point.y;
+			SELF.x := SELF.x - point.x;
+			SELF.y := SELF.y - point.y;
 		END sub;
 		
 		(** Метод умножения.
@@ -176,8 +179,8 @@ TYPE
 		*)		
 		PROCEDURE mul*(factor : REAL); 
 		BEGIN 
-			SELF.x = qRound(SELF.x * factor);
-			SELF.y = qRound(SELF.y * factor);
+			SELF.x := QGlobal0.qRound(SELF.x * factor);
+			SELF.y := QGlobal0.qRound(SELF.y * factor);
 		END mul;
 		
 		(** Метод деления.
@@ -200,8 +203,8 @@ TYPE
 		*)		
 		PROCEDURE div*(divisor : REAL); 
 		BEGIN 
-			SELF.x = qRound(SELF.x / divisor);
-			SELF.y = qRound(SELF.y / divisor);
+			SELF.x := QGlobal0.qRound(SELF.x / divisor);
+			SELF.y := QGlobal0.qRound(SELF.y / divisor);
 		END div;
 		
 	END QPoint;
@@ -213,22 +216,22 @@ TYPE
 	Возвращает истину если \a p1 and \a p2 равны,
 	в противном случае возвращает ложь.
 	\sa "#".
-*)		
+	
 PROCEDURE "="* (CONST p1, CONST p2 : QPoint): BOOLEAN; 
 BEGIN 
 	return (p1.x = p2.x && p1.y = p2.y);
 END "=";
-
+*)	
 (** Оператор неравенства  "#".
 	Возвращает истину если \a p1 и \a p2 неравны,
 	в противном случае возвращает ложь.
 	\sa "=".			
-*)		
+	
 PROCEDURE "#"* (CONST p1, CONST p2 : QPoint): BOOLEAN; 
 BEGIN 
 	return (p1.x # p2.x && p1.y # p2.y);
 END "#";
-
+*)	
 (** Оператор сложения  "+".
 	Возвращает объект QPoint, который является суммой заданных точек
 	\a p1 и \a p2.
@@ -242,7 +245,7 @@ END "#";
 			p = p + q;    // p станет (2, 11)
 		END;
 	\endcode			
-*)		
+	
 PROCEDURE "+"* (CONST p1, CONST p2 : QPoint): QPoint; 
 VAR
 	p : QPoint;
@@ -250,7 +253,7 @@ BEGIN
 	NEW(p, p1.x + p2.x, p1.y + p2.y);
 	return p;
 END "+";
-
+*)	
 (** Оператор вычитания  "-".
 	Возвращает объект QPoint, который является разностью заданных точек
 	\a p1 и \a p2.
@@ -264,7 +267,7 @@ END "+";
 			p = p - q;    // p станет (4, 3)
 		END;
 	\endcode			
-*)		
+	
 PROCEDURE "-"* (CONST p1, CONST p2 : QPoint): QPoint; 
 VAR
 	p : QPoint;
@@ -272,7 +275,7 @@ BEGIN
 	NEW(p, p1.x - p2.x, p1.y - p2.y);
 	return p;
 END "-";
-
+*)	
 (** Оператор умножения  "*".
 	Возвращает объект QPoint, который является произведением точеки и константы
 	\a p и \a с.
@@ -287,7 +290,7 @@ END "-";
 			q = q * 2.3;  // q станет (-2, 9) 
 		END;
 	\endcode			
-*)		
+	
 PROCEDURE "*"* (CONST p : QPoint, c : REAL): QPoint; 
 VAR
 	p : QPoint;
@@ -295,7 +298,7 @@ BEGIN
 	NEW(p, qRound(p1.x*c), qRound(p1.y*c));
 	return p;
 END "*";
-
+*)	
 (** Оператор деления  "/".
 	Возвращает объект QPoint, который является произведением точеки и константы
 	\a p и \a с.
@@ -310,7 +313,7 @@ END "*";
 			q = q / 2.3;  // q станет (-1, 4)
 		END;
 	\endcode			
-*)		
+	
 PROCEDURE "/"* (CONST p : QPoint, c : REAL): QPoint; 
 VAR
 	p : QPoint;
@@ -318,13 +321,13 @@ BEGIN
 	NEW(p, qRound(p1.x/c), qRound(p1.y/c));
 	return p;
 END "/";
-
+*)	
 
 
 
 (* Тело модуля *)
 BEGIN
-END QtCore0.
+END QPoint0.
 
 
 (* помойка *)
