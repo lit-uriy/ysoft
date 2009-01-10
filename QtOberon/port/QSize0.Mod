@@ -1,33 +1,33 @@
-(** В этом модуле реализован порт класса QPoint библиотеки
+(** В этом модуле реализован порт класса QSize библиотеки
 	\link{Qt4}{http://trolltech.com/products/} на язык Active Oberon.
 	\ver 0.0.0 (нулевая) версия модуля. *)
 (**
-	\todo Реализовать связанные не-члены объекта QPoint:
-bool operator!= ( const QPoint & p1, const QPoint & p2 )
-const QPoint operator* ( const QPoint & point, qreal factor )
-const QPoint operator* ( qreal factor, const QPoint & point )
-const QPoint operator+ ( const QPoint & p1, const QPoint & p2 )
-const QPoint operator- ( const QPoint & p1, const QPoint & p2 )
-const QPoint operator- ( const QPoint & point )
-const QPoint operator/ ( const QPoint & point, qreal divisor )
-bool operator== ( const QPoint & p1, const QPoint & p2 )
+	\todo Реализовать связанные не-члены объекта QSize:
+bool operator!= ( const QSize & p1, const QSize & p2 )
+const QSize operator* ( const QSize & point, qreal factor )
+const QSize operator* ( qreal factor, const QSize & point )
+const QSize operator+ ( const QSize & p1, const QSize & p2 )
+const QSize operator- ( const QSize & p1, const QSize & p2 )
+const QSize operator- ( const QSize & point )
+const QSize operator/ ( const QSize & point, qreal divisor )
+bool operator== ( const QSize & p1, const QSize & p2 )
 
 	\todo Реализовать модуль QGlobal0 и вспомогательные функции в нем qRound(), qAbs.
 	
 	\todo Рассмотреть возможность вывода объекта в поток:
 	Связанные не-члены:
-QDataStream & operator<< ( QDataStream & stream, const QPoint & point )
-QDataStream & operator>> ( QDataStream & stream, QPoint & point )
-	\pre{В заключение, объект QPoint может быть выведен в поток так же просто
+QDataStream & operator<< ( QDataStream & stream, const QSize & point )
+QDataStream & operator>> ( QDataStream & stream, QSize & point )
+	\pre{В заключение, объект QSize может быть выведен в поток так же просто
 	как и сравниваться}
 	
 *)
-MODULE QPoint0;
+MODULE QSize0;
 
 IMPORT
 	QGlobal0 (* - qRound(),  *);
 
-(** Объект QPoint описывает точку на плоскости с целочисленными координатами.
+(** Объект QSize описывает точку на плоскости с целочисленными координатами.
 
 	Точка на плоскости определяется двумя экспортируемыми координатам \a x и \a y.
 	
@@ -46,20 +46,20 @@ IMPORT
 	\note \include replaceoperators.doc
 
 	
-	Объект QPoint также может быть использован как вектор: Сложение и
+	Объект QSize также может быть использован как вектор: Сложение и
 	вычитание определены как для векторов (каждый компонент добавляется
-	отдельно). Объект QPoint также может быть разделен или умножен на
+	отдельно). Объект QSize также может быть разделен или умножен на
 	\c INTEGER или \c REAL.
 	
-	Дополнительно, класс QPoint предоставляет функцию manhattanLength(),
-	которая дает экономичную аппроксимацию длинны объекта QPoint
+	Дополнительно, класс QSize предоставляет функцию manhattanLength(),
+	которая дает экономичную аппроксимацию длинны объекта QSize
 	интерпретируемого как вектор.
 
 *)
 
 TYPE
 	(** Объект QSize -  точка на плоскости с целочисленными координатами.
-		\sa QSizeF, QPoint, QRect
+		\sa QSizeF, QSize, QRect
 	*)
 	QSize* = OBJECT;
 		VAR
@@ -136,7 +136,7 @@ TYPE
 			Например:
 			\code
 				VAR
-					p, q : QPoint;
+					p, q : QSize;
 				BEGIN
 					NEW(p, 3, 7);
 					NEW(q, -1, 4);
@@ -144,7 +144,7 @@ TYPE
 				END;
 			\endcode
 		*)		
-		PROCEDURE add*(CONST point : QPoint); 
+		PROCEDURE add*(CONST point : QSize); 
 		BEGIN 
 			SELF.x = SELF.x + point.x;
 			SELF.y = SELF.y + point.y;
@@ -156,7 +156,7 @@ TYPE
 			Например:
 			\code
 				VAR
-					p, q : QPoint;
+					p, q : QSize;
 				BEGIN
 					NEW(p, 3, 7);
 					NEW(q, -1, 4);
@@ -164,7 +164,7 @@ TYPE
 				END;
 			\endcode
 		*)		
-		PROCEDURE sub*(CONST point : QPoint); 
+		PROCEDURE sub*(CONST point : QSize); 
 		BEGIN 
 			SELF.x = SELF.x - point.x;
 			SELF.y = SELF.y - point.y;
@@ -176,7 +176,7 @@ TYPE
 			Например:
 			\code
 				VAR
-					p, q : QPoint;
+					p, q : QSize;
 				BEGIN
 					NEW(p, 3, 7);
 					NEW(q, -1, 4);
@@ -185,7 +185,7 @@ TYPE
 				END;
 			\endcode
 			Заметьте, что результат округляется к ближайшему целому, поскольку
-			точка представлена целыми числами. Используйте QPointF если необходимо
+			точка представлена целыми числами. Используйте QSizeF если необходимо
 			представление с плавающей запятой.
 		*)		
 		PROCEDURE mul*(factor : REAL); 
@@ -200,7 +200,7 @@ TYPE
 			Например:
 			\code
 				VAR
-					p, q : QPoint;
+					p, q : QSize;
 				BEGIN
 					NEW(p, 3, 7);
 					NEW(q, -1, 4);
@@ -209,7 +209,7 @@ TYPE
 				END;
 			\endcode
 			Заметьте, что результат округляется к ближайшему целому, поскольку
-			точка представлена целыми числами. Используйте QPointF если необходимо
+			точка представлена целыми числами. Используйте QSizeF если необходимо
 			представление с плавающей запятой.
 		*)		
 		PROCEDURE div*(divisor : REAL); 
@@ -218,7 +218,7 @@ TYPE
 			SELF.y = qRound(SELF.y / divisor);
 		END div;
 		
-	END QPoint;
+	END QSize;
 
 
 
@@ -228,7 +228,7 @@ TYPE
 	в противном случае возвращает ложь.
 	\sa "#".
 *)		
-PROCEDURE "="* (CONST p1, CONST p2 : QPoint): BOOLEAN; 
+PROCEDURE "="* (CONST p1, CONST p2 : QSize): BOOLEAN; 
 BEGIN 
 	return (p1.x = p2.x && p1.y = p2.y);
 END "=";
@@ -238,18 +238,18 @@ END "=";
 	в противном случае возвращает ложь.
 	\sa "=".			
 *)		
-PROCEDURE "#"* (CONST p1, CONST p2 : QPoint): BOOLEAN; 
+PROCEDURE "#"* (CONST p1, CONST p2 : QSize): BOOLEAN; 
 BEGIN 
 	return (p1.x # p2.x && p1.y # p2.y);
 END "#";
 
 (** Оператор сложения  "+".
-	Возвращает объект QPoint, который является суммой заданных точек
+	Возвращает объект QSize, который является суммой заданных точек
 	\a p1 и \a p2.
 	Например:
 	\code
 		VAR
-			p, q : QPoint;
+			p, q : QSize;
 		BEGIN
 			NEW(p, 3, 7);
 			NEW(q, -1, 4);
@@ -257,21 +257,21 @@ END "#";
 		END;
 	\endcode			
 *)		
-PROCEDURE "+"* (CONST p1, CONST p2 : QPoint): QPoint; 
+PROCEDURE "+"* (CONST p1, CONST p2 : QSize): QSize; 
 VAR
-	p : QPoint;
+	p : QSize;
 BEGIN
 	NEW(p, p1.x + p2.x, p1.y + p2.y);
 	return p;
 END "+";
 
 (** Оператор вычитания  "-".
-	Возвращает объект QPoint, который является разностью заданных точек
+	Возвращает объект QSize, который является разностью заданных точек
 	\a p1 и \a p2.
 	Например:
 	\code
 		VAR
-			p, q : QPoint;
+			p, q : QSize;
 		BEGIN
 			NEW(p, 3, 7);
 			NEW(q, -1, 4);
@@ -279,21 +279,21 @@ END "+";
 		END;
 	\endcode			
 *)		
-PROCEDURE "-"* (CONST p1, CONST p2 : QPoint): QPoint; 
+PROCEDURE "-"* (CONST p1, CONST p2 : QSize): QSize; 
 VAR
-	p : QPoint;
+	p : QSize;
 BEGIN
 	NEW(p, p1.x - p2.x, p1.y - p2.y);
 	return p;
 END "-";
 
 (** Оператор умножения  "*".
-	Возвращает объект QPoint, который является произведением точеки и константы
+	Возвращает объект QSize, который является произведением точеки и константы
 	\a p и \a с.
 	Например:
 	\code
 		VAR
-			p, q : QPoint;
+			p, q : QSize;
 		BEGIN
 			NEW(p, 3, 7);
 			NEW(q, -1, 4);
@@ -302,21 +302,21 @@ END "-";
 		END;
 	\endcode			
 *)		
-PROCEDURE "*"* (CONST p : QPoint, c : REAL): QPoint; 
+PROCEDURE "*"* (CONST p : QSize, c : REAL): QSize; 
 VAR
-	p : QPoint;
+	p : QSize;
 BEGIN
 	NEW(p, qRound(p1.x*c), qRound(p1.y*c));
 	return p;
 END "*";
 
 (** Оператор деления  "/".
-	Возвращает объект QPoint, который является произведением точеки и константы
+	Возвращает объект QSize, который является произведением точеки и константы
 	\a p и \a с.
 	Например:
 	\code
 		VAR
-			p, q : QPoint;
+			p, q : QSize;
 		BEGIN
 			NEW(p, 3, 7);
 			NEW(q, -3, 10);
@@ -325,9 +325,9 @@ END "*";
 		END;
 	\endcode			
 *)		
-PROCEDURE "/"* (CONST p : QPoint, c : REAL): QPoint; 
+PROCEDURE "/"* (CONST p : QSize, c : REAL): QSize; 
 VAR
-	p : QPoint;
+	p : QSize;
 BEGIN
 	NEW(p, qRound(p1.x/c), qRound(p1.y/c));
 	return p;
@@ -347,16 +347,16 @@ END QtCore0.
 	отсутствуютТоТ.к. в Активном Обероне  
 	Пусть задана точка \e p, тогда все следующие выражения эквивалентны:
 	\code{cpp}
-		QPoint p;
+		QSize p;
 		
 		p.setX(p.x() + 1);
-		p += QPoint(1, 0);
+		p += QSize(1, 0);
 		p.rx()++;
 	\endcode
 	тоже Активном обероне:
 	\code
 		VAR
-			p, q : QPoint;
+			p, q : QSize;
 		BEGIN
 			NEW(p); 
 			p.x = p.x + 1;
@@ -369,11 +369,11 @@ END QtCore0.
 	\col1					|	\col2
 							|	\code
 	\code{cpp}				|		VAR
-		QPoint p;			|			p, q : QPoint;
+		QSize p;			|			p, q : QSize;
 							|		BEGIN
 							|			NEW(p); 
 		p.setX(p.x() + 1);	|			p.x = p.x + 1;
-		p += QPoint(1, 0);	|			NEW(q, 1, 0); p.add(q);
+		p += QSize(1, 0);	|			NEW(q, 1, 0); p.add(q);
 		p.rx()++;			|			INC(p.x);
 							|		END;
 	\endcode				|	\endcode
@@ -385,10 +385,10 @@ END QtCore0.
 	Пусть задана точка \e p, тогда все следующие выражения эквивалентны:
 	
 	\code{cpp}
-		QPoint p;
+		QSize p;
 		
 		p.setX(p.x() + 1);
-		p += QPoint(1, 0);
+		p += QSize(1, 0);
 		p.rx()++;
 	\endcode
 *)
