@@ -1,13 +1,13 @@
-(**  ( global.{h|cpp} 
-	\link{Qt4}{http://trolltech.com/products/}  Active Oberon.
-	\ver 0.0.0 ()  *)
+(** В этом модуле реализованы тесты объекта QPoint
+ *)
+
+MODULE QPointTest;
 
 (**
 	\todo  
 	\o qRound().
 	
 *)
-MODULE QTest0;
 
 IMPORT
 	KernelLog, QPoint0;
@@ -69,13 +69,13 @@ END Test;
 
 (*  Body *)
 BEGIN
-	KernelLog.String("Modul QTest0 loded"); KernelLog.Ln;
-END QTest0.
+	KernelLog.String("Module QPointTest loded"); KernelLog.Ln;
+END QPointTest.
 
 
-SystemTools.Free QTest0 QPoint0 QGlobal0 ~
+SystemTools.Free QPointTest QPoint0 QGlobal0 ~
 
-QTest0.Test ~
+QPointTest.Test ~
 
 
 

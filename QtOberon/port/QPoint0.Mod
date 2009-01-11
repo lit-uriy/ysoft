@@ -101,12 +101,11 @@ TYPE
 			Например:
 			\code
 				VAR
-					p, q : QPoint;
+					p : QPoint;
+					i : INTEGER;
 				BEGIN
 					NEW(p, 3, 7);
-					NEW(q, -3, 10);
-					p = p / 4;    // p станет (0, 2)
-					q = q / 2.3;  // q станет (-1, 4)
+					i := p.manhattanLength();    // i станет (10)
 				END;
 			\endcode			
 		*)		

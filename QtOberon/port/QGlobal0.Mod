@@ -1,6 +1,6 @@
-(**  ( global.{h|cpp} 
-	\link{Qt4}{http://trolltech.com/products/}  Active Oberon.
-	\ver 0.0.0 ()  *)
+(** В этом модуле реализован порт файла(ов) global.{h|cpp} библиотеки
+	\link{Qt4}{http://trolltech.com/products/} на язык Active Oberon.
+	\ver 0.0.0 (нулевая) версия модуля. *)
 
 (**
 	\todo  
