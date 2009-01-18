@@ -8,11 +8,13 @@ CONFIG += debug_and_release build_all
 
 
 #=========== Files =================
-HEADERS       += mainwindow.h
+HEADERS       += mainwindow.h \
+				bomparser.h
 
 	
 
-SOURCES       += mainwindow.cpp
+SOURCES       += mainwindow.cpp \
+				bomparser.cpp
 
 SOURCES       += main.cpp
 
@@ -23,7 +25,7 @@ FORMS		+=	mainwindow.ui
 
 #========= Dependency ==============
 #	--- Qt ---
-QT += sql
+#QT += sql
 
 #	--- External ---
 #EXTLIBPATH		=	

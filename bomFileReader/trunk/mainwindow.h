@@ -23,6 +23,7 @@ private slots:
 
 private:
 	void setCurrentPath(QString f_name);
+	void parseBom(QString f_name);
 
 
 private:

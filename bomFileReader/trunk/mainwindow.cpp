@@ -6,6 +6,7 @@
 #include <QtGui>
 
 #include "mainwindow.h"
+#include "bomparser.h"
 
 
 MainWindow::MainWindow(QWidget* p_parent) : QWidget(p_parent)
@@ -28,7 +29,7 @@ void MainWindow::slotOpenFileDialog()
 							 tr("BOM-файлы (*.bom);;Текстовые файлы (*.txt);;Все файлы (*)"));
 	
 	setCurrentPath(file_name);
-
+	parseBom(file_name);
 }
 
 
@@ -42,13 +43,11 @@ void MainWindow::slotOpenFileQuick()
 	{
 		QMessageBox::warning(this, tr("Предупреждение"),
                    tr("Файл не найден"),
-                   QMessageBox::Ok); 
+                   QMessageBox::Ok);
+		return;
 	}
-	else
-	{
-		setCurrentPath(file_name);
-	}
-
+	setCurrentPath(file_name);
+	parseBom(file_name);
 }
 
 void MainWindow::setCurrentPath(QString f_name)
@@ -64,3 +63,13 @@ void MainWindow::setCurrentPath(QString f_name)
 qDebug() << "File:" << f_name;
 qDebug() << "Path:" << root_path;
 }
+
+void MainWindow::parseBom(QString f_name)
+{
+  BomParser	parser(f_name);
+	
+	parser.setDelimiter(edt_delim->text());
+	parser.parse();
+}
+
+
