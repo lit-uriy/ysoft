@@ -4,11 +4,11 @@
 #ifndef YSCITEW_H_
 #define YSCITEW_H_
 
-#include <QFrame>
+//#include <QFrame>
 
 #include <QsciScintilla>
 
-//#include <Qsci/qsciapis.h>
+
 
 class QsciLexerCPP;
 

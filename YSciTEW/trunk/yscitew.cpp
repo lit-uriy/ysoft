@@ -19,9 +19,6 @@ YSciTEW::YSciTEW(QWidget* parent): QsciScintilla(parent)
 	layout->setMargin(0);
 
 	setLayout(layout);
-	
-	
-	
 
 	connect(this, SIGNAL(textChanged()), this, SLOT(slotTextChanged()));
 	*/
