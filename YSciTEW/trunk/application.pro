@@ -14,19 +14,19 @@ RESOURCES     = application.qrc
 
 #	  --- External ---
 
-USELIBDIR       = D:/libs/QScintilla-gpl-2.3p1_static/QScintilla
+USELIBDIR       = D:/libs/QScintilla-gpl-2.3p1/QScintilla
 include($$USELIBDIR/qscintilla.pri)
 
 
 #=========== Yura Config ================
-#CONFIG += debug_and_release build_all
-CONFIG  	+= release
+CONFIG += debug_and_release build_all
+#CONFIG  	+= release
 
-	DESTDIR     = ./build
-	OBJECTS_DIR = ./build/obj
-	UI_DIR      = ./build/uic
-	MOC_DIR     = ./build/moc
-	RCC_DIR		= ./build/rcc
+DESTDIR     = ./build
+OBJECTS_DIR = ./build/obj
+UI_DIR      = ./build/uic
+MOC_DIR     = ./build/moc
+RCC_DIR		= ./build/rcc
 
 
 CONFIG (debug, debug|release) {
