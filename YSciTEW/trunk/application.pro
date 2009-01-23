@@ -14,8 +14,6 @@ RESOURCES     = application.qrc
 
 #	  --- External ---
 
-#USELIBDIR       = D:/libs/QScintilla-gpl-2.3p1/QScintilla
-#include($$USELIBDIR/qscintilla.pri)
 include(D:/libs/QScintilla-gpl-2.3p1/QScintilla/qscintilla.pri)
 
 #=========== Yura Config ================
