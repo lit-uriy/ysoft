@@ -7,6 +7,7 @@
 
 #include "ui_mainwindow.h"
 
+
 /**	Класс MainWindow является ... .
  * 	Этот класс ...
  */
@@ -28,7 +29,9 @@ private:
 
 private:
 	QString file_name;
+	QString db_name;
 	QString root_path;
+
 };
 
 #endif //MAINWINDOW_H

@@ -35,7 +35,7 @@ void MainWindow::slotOpenFileDialog()
 
 void MainWindow::slotOpenFileQuick()
 {
-  QFileInfo fi;
+  QFileInfo 	fi;
   
 	file_name = edt_path->text();
 	fi.setFile(file_name);
@@ -46,14 +46,16 @@ void MainWindow::slotOpenFileQuick()
                    QMessageBox::Ok);
 		return;
 	}
+	
 	setCurrentPath(file_name);
+	// Анализируем bom-файл
 	parseBom(file_name);
 }
 
 void MainWindow::setCurrentPath(QString f_name)
 {
   QFileInfo fi;
-
+  
 	if(f_name.isEmpty()) return;
 	
 	edt_path->setText(f_name);
@@ -62,6 +64,7 @@ void MainWindow::setCurrentPath(QString f_name)
 
 qDebug() << "File:" << f_name;
 qDebug() << "Path:" << root_path;
+
 }
 
 void MainWindow::parseBom(QString f_name)
@@ -72,4 +75,123 @@ void MainWindow::parseBom(QString f_name)
 	parser.parse();
 }
 
+
+//===========================================================
+//				Создание БД настроек приложения
+//===========================================================
+/*
+bool  Session::CreateDb()
+{
+  QSqlQuery appdbquery(appdb);
+  QString	querystr;
+  QString	tmp;
+  bool ok;
+  
+	// Создаем таблицу груп пользователей
+	querystr=" \
+CREATE TABLE PCB \
+(  \
+  F_ID			INTEGER	PRIMARY KEY AUTOINCREMENT,	 \
+  F_REFDES		Text		 \
+  F_REFDES		Text		 \
+); \
+";
+	
+	ok = appdbquery.exec(querystr);
+	if (!ok)
+	{
+		QString qerr = appdb.lastError().text();
+		appdb_msg_err = QObject::tr("Невозможно создать служебную БД.\n\rПричина: ")+qerr;
+		return ok;
+	}	
+
+	// Заполняем таблицу груп пользователей	
+	querystr="INSERT INTO APPGROUP (F_ID, F_GROUP) VALUES (:id, :group)";
+	appdbquery.prepare(querystr);
+	appdbquery.bindValue(":id", GID_ROOT); appdbquery.bindValue(":group", "root");
+	appdbquery.exec();
+	appdbquery.bindValue(":id", GID_ADMIN); appdbquery.bindValue(":group", "admin");
+	appdbquery.exec();
+	appdbquery.bindValue(":id", GID_USER); appdbquery.bindValue(":group", "user");
+	ok = appdbquery.exec();	
+
+	// Создаем таблицу пользователей
+	
+	tmp.setNum(GID_USER);
+	querystr=" \
+CREATE TABLE APPUSER \
+(  \
+  F_ID			INTEGER	PRIMARY KEY AUTOINCREMENT,	 \
+  F_LOGIN		Text,		 \
+  F_PSWD		Text,		 \
+  F_GROUP		INTEGER DEFAULT " + tmp +",		 \
+  F_FIRSTNAME	Text,		 \
+  F_LASTNAME	Text		 \
+); \
+";
+
+	ok = appdbquery.exec(querystr);
+
+	if (!ok)
+	{
+		QString qerr = appdbquery.lastError().text();
+		appdb_msg_err = QObject::tr("Невозможно создать служебную БД.\n\rПричина: ")+qerr;
+		return ok;
+	}	
+
+	
+	// Заполняем таблицу пользователей	
+	querystr="\
+INSERT INTO \
+APPUSER (F_ID, F_LOGIN, F_PSWD, F_GROUP, F_FIRSTNAME, F_LASTNAME) \
+VALUES (:id, :login, :paswd, :group, :firstname, :lastname)";
+	appdbquery.prepare(querystr);
+	appdbquery.bindValue(":id", GID_ROOT);	appdbquery.bindValue(":login", "root"); 
+	appdbquery.bindValue(":paswd", "toor"); appdbquery.bindValue(":group", GID_ROOT);
+	appdbquery.bindValue(":firstname", "root"); appdbquery.bindValue(":lastname", "root");
+	appdbquery.exec();
+
+	// Создаем таблицу прочих настроек
+	querystr=" \
+CREATE TABLE APPSETTINGS \
+(  \
+  F_ID			INTEGER	PRIMARY KEY AUTOINCREMENT,	 \
+  F_TYPE		Text,		 \
+  F_VALUE		Text		 \
+); \
+";
+	
+	ok = appdbquery.exec(querystr);
+	if (!ok)
+	{
+		QString qerr = appdb.lastError().text();
+		appdb_msg_err = QObject::tr("Невозможно создать служебную БД.\n\rПричина: ")+qerr;
+		return ok;
+	}	
+
+	// Заполняем таблицу прочих настроек
+	querystr="INSERT INTO APPSETTINGS (F_TYPE, F_VALUE) VALUES (:type, :value)";
+	appdbquery.prepare(querystr);
+	appdbquery.bindValue(":type", "db_driver");
+	appdbquery.bindValue(":value", "");
+	appdbquery.exec();
+	appdbquery.bindValue(":type", "db_name");
+	appdbquery.bindValue(":value", "");
+	appdbquery.exec();
+	appdbquery.bindValue(":type", "db_user_name");
+	appdbquery.bindValue(":value", "");
+	appdbquery.exec(); 
+	appdbquery.bindValue(":type", "db_user_paswd");
+	appdbquery.bindValue(":value", "");
+	appdbquery.exec(); 
+	appdbquery.bindValue(":type", "db_charset");
+	appdbquery.bindValue(":value", "");
+	appdbquery.exec();
+	appdbquery.bindValue(":type", "style");
+	appdbquery.bindValue(":value", "");
+	appdbquery.exec(); 
+
+	return ok;
+}
+*/
 

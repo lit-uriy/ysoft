@@ -9,12 +9,13 @@ CONFIG += debug_and_release build_all
 
 #=========== Files =================
 HEADERS       += mainwindow.h \
-				bomparser.h
+				bomparser.h \
+				dbhandle.h
 
-	
 
 SOURCES       += mainwindow.cpp \
-				bomparser.cpp
+				bomparser.cpp \
+				dbhandle.cpp
 
 SOURCES       += main.cpp
 
@@ -25,19 +26,9 @@ FORMS		+=	mainwindow.ui
 
 #========= Dependency ==============
 #	--- Qt ---
-#QT += sql
+QT += sql
 
 #	--- External ---
-#EXTLIBPATH		=	
-
-DEPENDPATH	   +=	./
-
-INCLUDEPATH	   +=	./
-
-#QMAKE_LIBDIR   +=
-
-#LIBS		   +=
-
 
 
 #======== Translation ===============
