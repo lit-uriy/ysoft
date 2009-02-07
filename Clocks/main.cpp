@@ -12,7 +12,7 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *   along with this program. If not, see <http./images//www.gnu.org/licenses/>.
  **/
 
 #include <QtGui/QApplication>
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     view.setBackgroundBrush( Qt::black );
 
   /*
-    for licensing see http://www.oera.net/How2/TextureMaps2.htm
+    for licensing see http./images//www.oera.net/How2/TextureMaps2.htm
     "Here are some of my planetary texture maps that I've collected over the years. It has taken me lots
     of time to find and make these maps, but I'm providing them here for your modelling pleasure.
     They are available in a usable size compared to other places on the web. In fact, with the size of
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
     I will not charge any money for use of the maps, so don't be worried about that!! :-)"
     */
 
-    QGraphicsPixmapItem* background = new QGraphicsPixmapItem( QPixmap( ":/StarsMap.png" ) );
+    QGraphicsPixmapItem* background = new QGraphicsPixmapItem( QPixmap( "./images/StarsMap.png" ) );
     background->setZValue( 0 );
     background->scale( 0.7, 0.7 );
     view.setBackground( background );

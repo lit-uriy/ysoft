@@ -2,9 +2,9 @@
 # Project created by QtCreator 2008-12-28T09:04:02
 # -------------------------------------------------
 QT += svg
-CONFIG += \
-    release \
-    static
+CONFIG += release
+#CONFIG += static
+	
 TARGET = Clocks
 TEMPLATE = app
 SOURCES += main.cpp \
@@ -24,4 +24,18 @@ HEADERS += mainview.h \
     worldclock.h \
     simpleclock.h \
     digitalclock.h
-RESOURCES = images.qrc
+#RESOURCES = images.qrc
+
+
+DESTDIR     = ./build
+OBJECTS_DIR = ./build/obj
+UI_DIR      = ./build/uic
+MOC_DIR     = ./build/moc
+RCC_DIR		= ./build/rcc
+
+
+CONFIG (debug, debug|release) {
+	OBJECTS_DIR  = $$join(OBJECTS_DIR,,,d)
+	TARGET       = $$join(TARGET,,,d)
+	CONFIG      += console
+}

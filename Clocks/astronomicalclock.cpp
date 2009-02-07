@@ -12,7 +12,7 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *   along with this program. If not, see <http./images//www.gnu.org/licenses/>.
  **/
 
 #include <QRectF>
@@ -38,13 +38,13 @@ AstronomicalClock::AstronomicalClock( QGraphicsItem * parent ) :
 {
     setAcceptHoverEvents( true );
 
-    m_bg = new QGraphicsPixmapItem( QPixmap( ":/astro_bg.png" ) ),
-    m_zodiac = new QGraphicsPixmapItem( QPixmap( ":/astro_zodiac.png" ) ),
-    m_pdt = new QGraphicsPixmapItem( QPixmap( ":/astro_present_day_time.png" ) ),
-    m_act = new QGraphicsPixmapItem( QPixmap( ":/astro_ancient_czech_time.png" ) ),
+    m_bg = new QGraphicsPixmapItem( QPixmap( "./images/astro_bg.png" ) ),
+    m_zodiac = new QGraphicsPixmapItem( QPixmap( "./images/astro_zodiac.png" ) ),
+    m_pdt = new QGraphicsPixmapItem( QPixmap( "./images/astro_present_day_time.png" ) ),
+    m_act = new QGraphicsPixmapItem( QPixmap( "./images/astro_ancient_czech_time.png" ) ),
 
-    m_sun = new QGraphicsPixmapItem( QPixmap( ":/astro_sun.png" ) );
-    m_shadow = new QGraphicsPixmapItem( QPixmap( ":/astro_shadow.png" ) );
+    m_sun = new QGraphicsPixmapItem( QPixmap( "./images/astro_sun.png" ) );
+    m_shadow = new QGraphicsPixmapItem( QPixmap( "./images/astro_shadow.png" ) );
     m_timer->stop();
 }
 

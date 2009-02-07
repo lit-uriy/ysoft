@@ -12,7 +12,7 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *   along with this program. If not, see <http./images//www.gnu.org/licenses/>.
  **/
 
 #include <QGraphicsPixmapItem>
@@ -32,9 +32,9 @@
 #include "astronomicalclock.h"
 
 ClockManager::ClockManager(QGraphicsScene& scene, QGraphicsItem *parent) : QObject(),  QGraphicsItem( parent ),
-    leftButton( QPixmap(":/arrowLeft.png"), QPixmap(":/glowLeft.png"), QPixmap(":/shadowLeft.png"), this ),
-    rightButton( QPixmap(":/arrowRight.png"), QPixmap(":/glowRight.png"), QPixmap(":/shadowRight.png"), this ),
-    middle( QPixmap(":/middle.png") ),
+    leftButton( QPixmap("./images/arrowLeft.png"), QPixmap("./images/glowLeft.png"), QPixmap("./images/shadowLeft.png"), this ),
+    rightButton( QPixmap("./images/arrowRight.png"), QPixmap("./images/glowRight.png"), QPixmap("./images/shadowRight.png"), this ),
+    middle( QPixmap("./images/middle.png") ),
     m_currentPos( 0 )
 {
     rightButton.setPos( 425, 0 );

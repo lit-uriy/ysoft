@@ -12,7 +12,7 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *   along with this program. If not, see <http./images//www.gnu.org/licenses/>.
  **/
 
 #include <QRectF>
@@ -28,8 +28,8 @@
 SimpleClock::SimpleClock( QGraphicsItem * parent ) :
   AbstractClock( parent )
 {
-    m_shadow = new QGraphicsPixmapItem( QPixmap( ":/simpleclock_shadow.png" ) );
-    m_renderer = new QSvgRenderer( QString(":/simpleclock.svg") );
+    m_shadow = new QGraphicsPixmapItem( QPixmap( "./images/simpleclock_shadow.png" ) );
+    m_renderer = new QSvgRenderer( QString("./images/simpleclock.svg") );
 }
 
 QRectF SimpleClock::boundingRect() const

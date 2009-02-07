@@ -12,7 +12,7 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *   along with this program. If not, see <http./images//www.gnu.org/licenses/>.
  **/
 
 #include <QRectF>
@@ -27,8 +27,8 @@
 WorldClock::WorldClock( QGraphicsItem * parent )
     : AbstractClock( parent )
 {
-    m_globe = new QGraphicsPixmapItem( QPixmap( ":/globe.png" ) );
-    m_worlds = new QGraphicsPixmapItem( QPixmap( ":/worlds.png" ) );
+    m_globe = new QGraphicsPixmapItem( QPixmap( "./images/globe.png" ) );
+    m_worlds = new QGraphicsPixmapItem( QPixmap( "./images/worlds.png" ) );
 }
 
 QRectF WorldClock::boundingRect() const

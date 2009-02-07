@@ -12,7 +12,7 @@
  *   GNU General Public License for more details.
  *
  *   You should have received a copy of the GNU General Public License
- *   along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *   along with this program. If not, see <http./images//www.gnu.org/licenses/>.
  **/
 
 #include "digitalclock.h"
@@ -23,20 +23,20 @@
 #include <QDebug>
 
 DigitalClock::DigitalClock( QGraphicsItem * parent ) : AbstractClock( parent ),
-    num_0( QPixmap( ":/digital_0.png") ),
-    num_1( QPixmap( ":/digital_1.png") ),
-    num_2( QPixmap( ":/digital_2.png") ),
-    num_3( QPixmap( ":/digital_3.png") ),
-    num_4( QPixmap( ":/digital_4.png") ),
-    num_5( QPixmap( ":/digital_5.png") ),
-    num_6( QPixmap( ":/digital_6.png") ),
-    num_7( QPixmap( ":/digital_7.png") ),
-    num_8( QPixmap( ":/digital_8.png") ),
-    num_9( QPixmap( ":/digital_9.png") ),
-    m_dots( QPixmap( ":/dots.png") ),
+    num_0( QPixmap( "./images/digital_0.png") ),
+    num_1( QPixmap( "./images/digital_1.png") ),
+    num_2( QPixmap( "./images/digital_2.png") ),
+    num_3( QPixmap( "./images/digital_3.png") ),
+    num_4( QPixmap( "./images/digital_4.png") ),
+    num_5( QPixmap( "./images/digital_5.png") ),
+    num_6( QPixmap( "./images/digital_6.png") ),
+    num_7( QPixmap( "./images/digital_7.png") ),
+    num_8( QPixmap( "./images/digital_8.png") ),
+    num_9( QPixmap( "./images/digital_9.png") ),
+    m_dots( QPixmap( "./images/dots.png") ),
     m_empty( QPixmap() )
 {
-    m_slice = new QGraphicsPixmapItem( QPixmap( ":/slice.png" ) );
+    m_slice = new QGraphicsPixmapItem( QPixmap( "./images/slice.png" ) );
 }
 
 QRectF DigitalClock::boundingRect() const
