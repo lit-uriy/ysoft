@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="75"
+   height="75"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="button.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/Users/thomasmoenicke/workspace/clocks/Clocks/images/glowRight.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3302">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3304" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.23188406;"
+         offset="1"
+         id="stop3306" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3155">
+      <stop
+         style="stop-color:#494949;stop-opacity:0.72463769;"
+         offset="0"
+         id="stop3157" />
+      <stop
+         style="stop-color:#5d5d5d;stop-opacity:0.30434781;"
+         offset="1"
+         id="stop3159" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective3264"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3155"
+       id="linearGradient3300"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-58.464493,5.088848)"
+       x1="95.964493"
+       y1="-1.1914325"
+       x2="95.964493"
+       y2="34.013737" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3302"
+       id="linearGradient3308"
+       x1="-181.77678"
+       y1="-76.772324"
+       x2="-181.77678"
+       y2="-25.34375"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3155"
+       id="linearGradient3326"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-58.464493,5.088848)"
+       x1="95.964493"
+       y1="-1.1914325"
+       x2="95.964493"
+       y2="34.013737" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3302"
+       id="linearGradient3328"
+       gradientUnits="userSpaceOnUse"
+       x1="-181.77678"
+       y1="-76.772324"
+       x2="-181.77678"
+       y2="-25.34375" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3155"
+       id="linearGradient3346"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-58.464493,5.088848)"
+       x1="95.964493"
+       y1="-1.1914325"
+       x2="95.964493"
+       y2="34.013737" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3155"
+       id="linearGradient3348"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-58.464493,5.088848)"
+       x1="95.964493"
+       y1="-1.1914325"
+       x2="95.964493"
+       y2="34.013737" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3155"
+       id="linearGradient3354"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-58.464493,5.088848)"
+       x1="95.964493"
+       y1="-1.1914325"
+       x2="95.964493"
+       y2="34.013737" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3155"
+       id="linearGradient3358"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.0281497,-58.464493,3.1415212)"
+       x1="95.964493"
+       y1="-1.1914325"
+       x2="95.964493"
+       y2="34.013737" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3155"
+       id="linearGradient3380"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.0281497,-58.464493,3.1415212)"
+       x1="95.964493"
+       y1="-1.1914325"
+       x2="95.964493"
+       y2="34.013737" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3155"
+       id="linearGradient3398"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.0281497,-58.464493,3.1415212)"
+       x1="95.964493"
+       y1="-1.1914325"
+       x2="95.964493"
+       y2="34.013737" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3302"
+       id="linearGradient3400"
+       gradientUnits="userSpaceOnUse"
+       x1="-181.77678"
+       y1="-76.772324"
+       x2="-181.77678"
+       y2="-25.34375" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3155"
+       id="linearGradient2446"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.0281497,-58.464493,3.1415212)"
+       x1="95.964493"
+       y1="-1.1914325"
+       x2="95.964493"
+       y2="34.013737" />
+    <filter
+       inkscape:collect="always"
+       id="filter3228"
+       x="-0.14470589"
+       width="1.2894118"
+       y="-0.1025"
+       height="1.205">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.508533"
+         id="feGaussianBlur3230" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter3210">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.15085331"
+         id="feGaussianBlur3212" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3302"
+       id="linearGradient3220"
+       gradientUnits="userSpaceOnUse"
+       x1="-181.77678"
+       y1="-76.772324"
+       x2="-181.77678"
+       y2="-25.34375" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3302"
+       id="linearGradient3223"
+       gradientUnits="userSpaceOnUse"
+       x1="-181.77678"
+       y1="-76.772324"
+       x2="-181.77678"
+       y2="-25.34375"
+       gradientTransform="matrix(0.6868118,0,0,0.6868118,229.4893,166.85298)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="-26.059864"
+     inkscape:cy="77.142857"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="852"
+     inkscape:window-x="127"
+     inkscape:window-y="1072" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="background"
+     sodipodi:insensitive="true">
+    <image
+       y="-401.50757"
+       x="-1547.995"
+       id="image3266"
+       height="1250"
+       width="2500"
+       sodipodi:absref="/Users/thomasmoenicke/workspace/clocks/Clocks/images/StarsMap_2500x1250.jpg"
+       xlink:href="StarsMap_2500x1250.jpg" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3364"
+       inkscape:export-filename="/Users/thomasmoenicke/workspace/clocks/Clocks/images/leftbutton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="translate(-105.35714,-1.0714286)">
+      <rect
+         ry="0"
+         y="-1.3157883"
+         x="-0.046134949"
+         height="77.631577"
+         width="75.09227"
+         id="rect2383"
+         style="opacity:0.6;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <g
+         id="g3360">
+        <rect
+           style="opacity:0.6;fill:url(#linearGradient3358);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect3270"
+           width="75.09227"
+           height="36.196186"
+           x="-0.046134949"
+           y="1.9165499"
+           ry="0" />
+        <rect
+           style="opacity:0.6;fill:#b8b8b8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect3280"
+           width="75.09227"
+           height="0.63759232"
+           x="-0.046134949"
+           y="1.2176576"
+           ry="0" />
+      </g>
+    </g>
+    <g
+       id="g3292"
+       transform="matrix(0.6868118,0,0,0.6868118,54.967837,69.562636)"
+       inkscape:export-filename="/Users/thomasmoenicke/workspace/clocks/Clocks/images/leftbutton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         id="path3290"
+         d="M -163.5,-79.85714 L -199.92857,-54.142858 L -163.5,-28.428572 L -163.5,-39.116072 L -184.78125,-54.142858 L -163.5,-69.16964 L -163.5,-79.85714 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         id="rect3284"
+         d="M -163.5625,-76.772321 L -199.99107,-51.058036 L -163.5625,-25.34375 L -163.5625,-36.03125 L -184.84375,-51.058036 L -163.5625,-66.084821 L -163.5625,-76.772321 z"
+         style="fill:url(#linearGradient3308);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g3370"
+       transform="matrix(6.658475,0,0,1,187.56656,-107.07617)"
+       inkscape:export-filename="/Users/thomasmoenicke/workspace/clocks/Clocks/images/middleButton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         ry="0"
+         y="-1.3157883"
+         x="-0.046134949"
+         height="77.631577"
+         width="75.09227"
+         id="rect3372"
+         style="opacity:0.6;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <g
+         id="g3374">
+        <rect
+           style="opacity:0.6;fill:url(#linearGradient3380);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect3376"
+           width="75.09227"
+           height="36.196186"
+           x="-0.046134949"
+           y="1.9165499"
+           ry="0" />
+        <rect
+           style="opacity:0.6;fill:#b8b8b8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect3378"
+           width="75.09227"
+           height="0.63759232"
+           x="-0.046134949"
+           y="1.2176576"
+           ry="0" />
+      </g>
+    </g>
+    <g
+       id="g3382"
+       transform="matrix(-1,0,0,1,461.21429,141.32397)"
+       inkscape:export-filename="/Users/thomasmoenicke/workspace/clocks/Clocks/images/rightButton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         ry="0"
+         y="-1.3157883"
+         x="-0.046134949"
+         height="77.631577"
+         width="75.09227"
+         id="rect3384"
+         style="opacity:0.6;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <g
+         id="g3386">
+        <rect
+           style="opacity:0.6;fill:url(#linearGradient3398);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect3388"
+           width="75.09227"
+           height="36.196186"
+           x="-0.046134949"
+           y="1.9165499"
+           ry="0" />
+        <rect
+           style="opacity:0.6;fill:#b8b8b8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect3390"
+           width="75.09227"
+           height="0.63759232"
+           x="-0.046134949"
+           y="1.2176576"
+           ry="0" />
+      </g>
+    </g>
+    <g
+       id="g3392"
+       transform="matrix(-0.6868118,0,0,0.6868118,300.88932,211.95804)"
+       inkscape:export-filename="/Users/thomasmoenicke/workspace/clocks/Clocks/images/rightButton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         id="path3394"
+         d="M -163.5,-79.85714 L -199.92857,-54.142858 L -163.5,-28.428572 L -163.5,-39.116072 L -184.78125,-54.142858 L -163.5,-69.16964 L -163.5,-79.85714 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         id="path3396"
+         d="M -163.5625,-76.772321 L -199.99107,-51.058036 L -163.5625,-25.34375 L -163.5625,-36.03125 L -184.84375,-51.058036 L -163.5625,-66.084821 L -163.5625,-76.772321 z"
+         style="fill:url(#linearGradient3400);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g2430"
+       inkscape:export-filename="/Users/thomasmoenicke/workspace/clocks/Clocks/images/leftbutton.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="translate(-125.32019,129.9982)">
+      <rect
+         ry="0"
+         y="-1.3157883"
+         x="-0.046134949"
+         height="77.631577"
+         width="75.09227"
+         id="rect2432"
+         style="opacity:0.6;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <g
+         id="g2434">
+        <rect
+           style="opacity:0.6;fill:url(#linearGradient2446);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect2436"
+           width="75.09227"
+           height="36.196186"
+           x="-0.046134949"
+           y="1.9165499"
+           ry="0" />
+        <rect
+           style="opacity:0.6;fill:#b8b8b8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect2438"
+           width="75.09227"
+           height="0.63759232"
+           x="-0.046134949"
+           y="1.2176576"
+           ry="0" />
+      </g>
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter3210)"
+       d="M 48.009786,17.839125 L 22.990214,35.500005 L 48.009786,53.160875 L 48.009786,45.820575 L 33.393572,35.500005 L 48.009786,25.179435 L 48.009786,17.839125 z"
+       id="path2442"
+       transform="matrix(-1,0,0,1,99.285714,129.28571)" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter3228)"
+       d="M 50.009785,19.839125 L 24.990215,37.500005 L 50.009785,55.160875 L 50.009785,47.820575 L 35.393565,37.500005 L 50.009785,27.179435 L 50.009785,19.839125 z"
+       id="path2444"
+       inkscape:export-filename="/Users/thomasmoenicke/workspace/clocks/Clocks/images/glowLeft.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(-1.1141963,0,0,1.1141963,81.282361,-4.2823613)" />
+    <path
+       style="fill:url(#linearGradient3223);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 117.15264,114.12484 L 92.13307,131.78571 L 117.15264,149.44659 L 117.15264,142.10629 L 102.53643,131.78571 L 117.15264,121.46514 L 117.15264,114.12484 z"
+       id="path3218" />
+  </g>
+</svg>

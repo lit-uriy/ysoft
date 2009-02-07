@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/" >
+        <file alias="StarsMap.png" >images/StarsMap.png</file>
+        <file alias="arrowLeft.png" >images/arrowLeft.png</file>
+        <file alias="arrowRight.png" >images/arrowRight.png</file>
+        <file alias="astro_ancient_czech_time.png" >images/astro_ancient_czech_time.png</file>
+        <file alias="astro_bg.png" >images/astro_bg.png</file>
+        <file alias="astro_present_day_time.png" >images/astro_present_day_time.png</file>
+        <file alias="astro_shadow.png" >images/astro_shadow.png</file>
+        <file alias="astro_sun.png" >images/astro_sun.png</file>
+        <file alias="astro_zodiac.png" >images/astro_zodiac.png</file>
+        <file alias="digital_0.png" >images/digital_0.png</file>
+        <file alias="digital_1.png" >images/digital_1.png</file>
+        <file alias="digital_2.png" >images/digital_2.png</file>
+        <file alias="digital_3.png" >images/digital_3.png</file>
+        <file alias="digital_4.png" >images/digital_4.png</file>
+        <file alias="digital_5.png" >images/digital_5.png</file>
+        <file alias="digital_6.png" >images/digital_6.png</file>
+        <file alias="digital_7.png" >images/digital_7.png</file>
+        <file alias="digital_8.png" >images/digital_8.png</file>
+        <file alias="digital_9.png" >images/digital_9.png</file>
+        <file alias="dots.png" >images/dots.png</file>
+        <file alias="globe.png" >images/globe.png</file>
+        <file alias="glowLeft.png" >images/glowLeft.png</file>
+        <file alias="glowRight.png" >images/glowRight.png</file>
+        <file alias="leftButton.png" >images/leftbutton.png</file>
+        <file alias="middle.png" >images/middleButton.png</file>
+        <file alias="rightButton.png" >images/rightButton.png</file>
+        <file alias="shadowLeft.png" >images/shadowLeft.png</file>
+        <file alias="shadowRight.png" >images/shadowRight.png</file>
+        <file alias="simpleclock.svg" >images/simpleclock.svg</file>
+        <file alias="simpleclock_shadow.png" >images/simpleclock_shadow.png</file>
+        <file alias="slice.png" >images/slice.png</file>
+        <file alias="worlds.png" >images/worlds.png</file>
+    </qresource>
+</RCC>
