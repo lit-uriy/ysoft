@@ -11,18 +11,25 @@
 
 #include "tableviewbuddy.h"
 
+inline void initMyResource(){ Q_INIT_RESOURCE(tableviewbuddy); }
 
 TableViewBuddy::TableViewBuddy(QTableView *tv): QObject(tv)
 {
 	view = tv;
-	actionCopy = new QAction(view);
-	actionCopy->setText(tr("&Copy"));
+	// !!!!!!!!! Меняет поведение контекстного меню представления !!!!!!!!!!!
+	view->setContextMenuPolicy(Qt::ActionsContextMenu);
+
+	initMyResource();
+	
+	actionCopy = new QAction(this);
+	actionCopy->setIcon (QIcon(":/images/edit_copy.png"));
+	actionCopy->setText(tr("&Копировать"));
 	actionCopy->setShortcut(tr("Ctrl+C"));
-	view->addAction(actionCopy);
+	actionCopy->setStatusTip(tr("Открыть существующий файл"));
 	connect(actionCopy, SIGNAL(triggered()),
 			 this,		SLOT(slotCopy()));
 	
-
+	view->addAction(actionCopy);
 }
 
 
