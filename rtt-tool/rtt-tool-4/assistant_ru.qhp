@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>ru.trolltech.assistant.442</namespace>
+    <virtualFolder>qdoc</virtualFolder>
+    <filterSection>
+        <toc>
+            <section title="Руководство по Qt Assistant" ref="assistant-manual.html">
+                <section title="Qt Assistant в подробностях" ref="assistant-details.html"></section>
+                <section title="Использование Qt Assistant как пользовательской справочной системы" ref="assistant-custom-help-viewer.html"></section>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="Qt Assistant в подробностях" ref="assistant-details.html"/>
+            <keyword name="Использование Qt Assistant как пользовательской справочной системы" ref="assistant-custom-help-viewer.html"/>
+        </keywords>
+        <files>
+            <file>assistant-custom-help-viewer.html</file>
+            <file>assistant-details.html</file>
+            <file>assistant-manual.html</file>
+            <file>classic.css</file>
+            <file>images/qt-logo.png</file>
+            <file>images/assistant-address-toolbar.png</file>
+            <file>images/assistant-assistant.png</file>
+            <file>images/assistant-dockwidgets.png</file>
+            <file>images/assistant-docwindow.png</file>
+            <file>images/assistant-examples.png</file>
+            <file>images/assistant-filter-toolbar.png</file>
+            <file>images/assistant-preferences-documentation.png</file>
+            <file>images/assistant-preferences-filters.png</file>
+            <file>images/assistant-preferences-fonts.png</file>
+            <file>images/assistant-search.png</file>
+            <file>images/assistant-toolbar.png</file>
+        </files>
+    </filterSection>
+</QtHelpProject>
