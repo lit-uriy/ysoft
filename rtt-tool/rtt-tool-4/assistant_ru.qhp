@@ -2,7 +2,19 @@
 <QtHelpProject version="1.0">
     <namespace>ru.trolltech.assistant.442</namespace>
     <virtualFolder>qdoc</virtualFolder>
+    <customFilter name="Руководство по Qt Assistant">
+        <filterAttribute>qt</filterAttribute>
+		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+        <filterAttribute>assistant</filterAttribute>
+        <filterAttribute>ru</filterAttribute>
+    </customFilter>
     <filterSection>
+        <filterAttribute>qt</filterAttribute>
+		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+        <filterAttribute>assistant</filterAttribute>
+        <filterAttribute>ru</filterAttribute>
         <toc>
             <section title="Руководство по Qt Assistant" ref="assistant-manual.html">
                 <section title="Qt Assistant в подробностях" ref="assistant-details.html"></section>

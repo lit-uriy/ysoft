@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>ru.trolltech.linguist.442</namespace>
+    <virtualFolder>qdoc</virtualFolder>
+    <customFilter name="Руководство по Qt Linguist">
+        <filterAttribute>qt</filterAttribute>
+		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+        <filterAttribute>linguist</filterAttribute>
+        <filterAttribute>ru</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>qt</filterAttribute>
+		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+        <filterAttribute>linguist</filterAttribute>
+        <filterAttribute>ru</filterAttribute>
+        <toc>
+            <section title="Руководство по Qt Linguist" ref="linguist-manual.html">
+                <section title="Руководство по Qt Linguist: Release Manager" ref="linguist-manager.html"></section>
+                <section title="Руководство по Qt Linguist: Translators" ref="linguist-translators.html"></section>
+                <section title="Руководство по Qt Linguist: Programmers" ref="linguist-programmers.html"></section>
+                <section title="Руководство по Qt Linguist: Формат TS-файлов" ref="linguist-ts-file-format.html"></section>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="Руководство по Qt Linguist: Release Manager" ref="linguist-manager.html"/>
+            <keyword name="Руководство по Qt Linguist: Translators" ref="linguist-translators.html"/>
+            <keyword name="Руководство по Qt Linguist: Programmers" ref="linguist-programmers.html"/>
+            <keyword name="Руководство по Qt Linguist: Формат TS-файлов" ref="linguist-ts-file-format.html"/>
+        </keywords>
+        <files>
+            <file>classic.css</file>
+            <file>linguist-arrowpad-arrowpad-cpp.html</file>
+            <file>linguist-arrowpad-arrowpad-h.html</file>
+            <file>linguist-arrowpad-arrowpad-pro.html</file>
+            <file>linguist-arrowpad-main-cpp.html</file>
+            <file>linguist-arrowpad-mainwindow-cpp.html</file>
+            <file>linguist-arrowpad-mainwindow-h.html</file>
+            <file>linguist-arrowpad.html</file>
+            <file>linguist-hellotr-hellotr-pro.html</file>
+            <file>linguist-hellotr-main-cpp.html</file>
+            <file>linguist-hellotr.html</file>
+            <file>linguist-manager.html</file>
+            <file>linguist-manual.html</file>
+            <file>linguist-programmers.html</file>
+            <file>linguist-translators.html</file>
+            <file>linguist-trollprint-main-cpp.html</file>
+            <file>linguist-trollprint-mainwindow-cpp.html</file>
+            <file>linguist-trollprint-mainwindow-h.html</file>
+            <file>linguist-trollprint-printpanel-cpp.html</file>
+            <file>linguist-trollprint-printpanel-h.html</file>
+            <file>linguist-trollprint-trollprint-pro.html</file>
+            <file>linguist-trollprint.html</file>
+            <file>linguist-ts-file-format.html</file>
+            <file>images/qt-logo.png</file>				
+            <file>images/linguist-arrowpad_en.png</file>
+            <file>images/linguist-arrowpad_fr.png</file>
+            <file>images/linguist-arrowpad_nl.png</file>
+            <file>images/linguist-auxlanguages.png</file>
+            <file>images/linguist-batchtranslation.png</file>
+            <file>images/linguist-check-empty.png</file>
+            <file>images/linguist-check-obsolete.png</file>
+            <file>images/linguist-check-off.png</file>
+            <file>images/linguist-check-on.png</file>
+            <file>images/linguist-check-warning.png</file>
+            <file>images/linguist-danger.png</file>
+            <file>images/linguist-doneandnext.png</file>
+            <file>images/linguist-editcopy.png</file>
+            <file>images/linguist-editcut.png</file>
+            <file>images/linguist-editfind.png</file>
+            <file>images/linguist-editpaste.png</file>
+            <file>images/linguist-editredo.png</file>
+            <file>images/linguist-editundo.png</file>
+            <file>images/linguist-examples.png</file>
+            <file>images/linguist-fileopen.png</file>
+            <file>images/linguist-fileprint.png</file>
+            <file>images/linguist-filesave.png</file>
+            <file>images/linguist-hellotr_en.png</file>
+            <file>images/linguist-hellotr_la.png</file>
+            <file>images/linguist-linguist.png</file>
+            <file>images/linguist-menubar.png</file>
+            <file>images/linguist-next.png</file>
+            <file>images/linguist-nextunfinished.png</file>
+            <file>images/linguist-phrasebookdialog.png</file>
+            <file>images/linguist-phrasebookopen.png</file>
+            <file>images/linguist-prev.png</file>
+            <file>images/linguist-previewtool.png</file>
+            <file>images/linguist-prevunfinished.png</file>
+            <file>images/linguist-toolbar.png</file>
+            <file>images/linguist-translationfilesettings.png</file>
+            <file>images/linguist-trollprint_10_en.png</file>
+            <file>images/linguist-trollprint_10_pt_bad.png</file>
+            <file>images/linguist-trollprint_10_pt_good.png</file>
+            <file>images/linguist-trollprint_11_en.png</file>
+            <file>images/linguist-trollprint_11_pt.png</file>
+            <file>images/linguist-validateaccelerators.png</file>
+            <file>images/linguist-validatephrases.png</file>
+            <file>images/linguist-validateplacemarkers.png</file>
+            <file>images/linguist-validatepunctuation.png</file>
+        </files>
+    </filterSection>
+</QtHelpProject>

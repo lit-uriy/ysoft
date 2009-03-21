@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>ru.trolltech.designer.442</namespace>
+    <virtualFolder>qdoc</virtualFolder>
+    <customFilter name="Руководство по Qt Designer">
+        <filterAttribute>qt</filterAttribute>
+		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+        <filterAttribute>designer</filterAttribute>
+        <filterAttribute>ru</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>qt</filterAttribute>
+		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+        <filterAttribute>designer</filterAttribute>
+        <filterAttribute>ru</filterAttribute>
+        <!--<filterAttribute>ru</filterAttribute>-->
+        <toc>
+            <section title="Руководство по Qt Designer" ref="designer-manual.html">
+                <section title="Getting Started with Qt Designer" ref="designer-getting-started.html"></section>
+                <section title="Designing a Component with Qt Designer" ref="designer-designing-a-component.html"></section>
+                <section title="Qt Designer's Widget Editing Mode" ref="designer-editing-mode.html"></section>
+                <section title="Using Containers in Qt Designer" ref="designer-using-containers.html"></section>
+                <section title="Creating Main Windows in Qt Designer" ref="designer-creating-mainwindows.html"></section>
+                <section title="Qt Designer's Signals and Slots Editing Mode" ref="designer-connection-mode.html"></section>
+                <section title="Qt Designer's Buddy Editing Mode" ref="designer-buddy-mode.html"></section>
+                <section title="Qt Designer's Tab Order Editing Mode" ref="designer-tab-order.html"></section>
+                <section title="Editing Resources with Qt Designer" ref="designer-resources.html"></section>
+                <section title="Using Stylesheets with Qt Designer" ref="designer-stylesheet.html"></section>
+                <section title="Customizing Qt Designer Forms" ref="designer-customizing-forms.html"></section>
+                <section title="Using Custom Widgets with Qt Designer" ref="designer-using-custom-widgets.html"></section>
+                <section title="Using a Component in Your Application" ref="designer-using-a-component.html"></section>
+                <section title="Creating Custom Widgets for Qt Designer" ref="designer-creating-custom-widgets.html"></section>
+                <section title="Creating Custom Widget Extensions" ref="designer-creating-custom-widgets-extensions.html"></section>
+                <section title="Qt Designer's UI File Format" ref="designer-ui-file-format.html"></section>
+                <section title="Implementation of the Recursive Shadow Casting Algorithm in Qt Designer" ref="designer-recursive-shadow-casting.html"></section>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="Getting Started with Qt Designer" ref="designer-getting-started.html"/>
+            <keyword name="Designing a Component with Qt Designer" ref="designer-designing-a-component.html"/>
+            <keyword name="Qt Designer's Widget Editing Mode" ref="designer-editing-mode.html"/>
+            <keyword name="Using Containers in Qt Designer" ref="designer-using-containers.html"/>
+            <keyword name="Creating Main Windows in Qt Designer" ref="designer-creating-mainwindows.html"/>
+            <keyword name="Qt Designer's Signals and Slots Editing Mode" ref="designer-connection-mode.html"/>
+            <keyword name="Qt Designer's Buddy Editing Mode" ref="designer-buddy-mode.html"/>
+            <keyword name="Qt Designer's Tab Order Editing Mode" ref="designer-tab-order.html"/>
+            <keyword name="Editing Resources with Qt Designer" ref="designer-resources.html"/>
+            <keyword name="Using Stylesheets with Qt Designer" ref="designer-stylesheet.html"/>
+            <keyword name="Customizing Qt Designer Forms" ref="designer-customizing-forms.html"/>
+            <keyword name="Using Custom Widgets with Qt Designer" ref="designer-using-custom-widgets.html"/>
+            <keyword name="Using a Component in Your Application" ref="designer-using-a-component.html"/>
+            <keyword name="Creating Custom Widgets for Qt Designer" ref="designer-creating-custom-widgets.html"/>
+            <keyword name="Creating Custom Widget Extensions" ref="designer-creating-custom-widgets-extensions.html"/>
+            <keyword name="Qt Designer's UI File Format" ref="designer-ui-file-format.html"/>
+            <keyword name="Implementation of the Recursive Shadow Casting Algorithm in Qt Designer" ref="designer-recursive-shadow-casting.html"/>
+        </keywords>
+        <files>
+            <file>classic.css</file>
+            <file>designer-buddy-mode.html</file>
+            <file>designer-calculatorbuilder-calculatorbuilder-pro.html</file>
+            <file>designer-calculatorbuilder-calculatorbuilder-qrc.html</file>
+            <file>designer-calculatorbuilder-calculatorform-cpp.html</file>
+            <file>designer-calculatorbuilder-calculatorform-h.html</file>
+            <file>designer-calculatorbuilder-calculatorform-ui.html</file>
+            <file>designer-calculatorbuilder-main-cpp.html</file>
+            <file>designer-calculatorbuilder.html</file>
+            <file>designer-calculatorform-calculatorform-cpp.html</file>
+            <file>designer-calculatorform-calculatorform-h.html</file>
+            <file>designer-calculatorform-calculatorform-pro.html</file>
+            <file>designer-calculatorform-calculatorform-ui.html</file>
+            <file>designer-calculatorform-main-cpp.html</file>
+            <file>designer-calculatorform.html</file>
+            <file>designer-connection-mode.html</file>
+            <file>designer-containerextension-containerextension-pro.html</file>
+            <file>designer-containerextension-multipagewidget-cpp.html</file>
+            <file>designer-containerextension-multipagewidget-h.html</file>
+            <file>designer-containerextension-multipagewidgetcontainerextension-cpp.html</file>
+            <file>designer-containerextension-multipagewidgetcontainerextension-h.html</file>
+            <file>designer-containerextension-multipagewidgetextensionfactory-cpp.html</file>
+            <file>designer-containerextension-multipagewidgetextensionfactory-h.html</file>
+            <file>designer-containerextension-multipagewidgetplugin-cpp.html</file>
+            <file>designer-containerextension-multipagewidgetplugin-h.html</file>
+            <file>designer-containerextension.html</file>
+            <file>designer-creating-custom-widgets-extensions.html</file>
+            <file>designer-creating-custom-widgets.html</file>
+            <file>designer-creating-mainwindows.html</file>
+            <file>designer-customizing-forms.html</file>
+            <file>designer-customwidgetplugin-analogclock-cpp.html</file>
+            <file>designer-customwidgetplugin-analogclock-h.html</file>
+            <file>designer-customwidgetplugin-customwidgetplugin-cpp.html</file>
+            <file>designer-customwidgetplugin-customwidgetplugin-h.html</file>
+            <file>designer-customwidgetplugin-customwidgetplugin-pro.html</file>
+            <file>designer-customwidgetplugin.html</file>
+            <file>designer-designing-a-component.html</file>
+            <file>designer-editing-mode.html</file>
+            <file>designer-getting-started.html</file>
+            <file>designer-manual.html</file>
+            <file>designer-recursive-shadow-casting.html</file>
+            <file>designer-resources.html</file>
+            <file>designer-stylesheet.html</file>
+            <file>designer-tab-order.html</file>
+            <file>designer-taskmenuextension-taskmenuextension-pro.html</file>
+            <file>designer-taskmenuextension-tictactoe-cpp.html</file>
+            <file>designer-taskmenuextension-tictactoe-h.html</file>
+            <file>designer-taskmenuextension-tictactoedialog-cpp.html</file>
+            <file>designer-taskmenuextension-tictactoedialog-h.html</file>
+            <file>designer-taskmenuextension-tictactoeplugin-cpp.html</file>
+            <file>designer-taskmenuextension-tictactoeplugin-h.html</file>
+            <file>designer-taskmenuextension-tictactoetaskmenu-cpp.html</file>
+            <file>designer-taskmenuextension-tictactoetaskmenu-h.html</file>
+            <file>designer-taskmenuextension.html</file>
+            <file>designer-ui-file-format.html</file>
+            <file>designer-using-a-component.html</file>
+            <file>designer-using-containers.html</file>
+            <file>designer-using-custom-widgets.html</file>
+            <file>designer-worldtimeclockbuilder-form-ui.html</file>
+            <file>designer-worldtimeclockbuilder-main-cpp.html</file>
+            <file>designer-worldtimeclockbuilder-worldtimeclockbuilder-pro.html</file>
+            <file>designer-worldtimeclockbuilder-worldtimeclockbuilder-qrc.html</file>
+            <file>designer-worldtimeclockbuilder.html</file>
+            <file>designer-worldtimeclockplugin-worldtimeclock-cpp.html</file>
+            <file>designer-worldtimeclockplugin-worldtimeclock-h.html</file>
+            <file>designer-worldtimeclockplugin-worldtimeclockplugin-cpp.html</file>
+            <file>designer-worldtimeclockplugin-worldtimeclockplugin-h.html</file>
+            <file>designer-worldtimeclockplugin-worldtimeclockplugin-pro.html</file>
+            <file>designer-worldtimeclockplugin.html</file>
+            <file>images/qt-logo.png</file>			
+            <file>images/designer-action-editor.png</file>
+            <file>images/designer-add-custom-toolbar.png</file>
+            <file>images/designer-add-files-button.png</file>
+            <file>images/designer-add-resource-entry-button.png</file>
+            <file>images/designer-adding-dockwidget.png</file>
+            <file>images/designer-adding-menu-action.png</file>
+            <file>images/designer-adding-toolbar-action.png</file>
+            <file>images/designer-buddy-making.png</file>
+            <file>images/designer-buddy-mode.png</file>
+            <file>images/designer-buddy-tool.png</file>
+            <file>images/designer-choosing-form.png</file>
+            <file>images/designer-code-viewer.png</file>
+            <file>images/designer-connection-dialog.png</file>
+            <file>images/designer-connection-editing.png</file>
+            <file>images/designer-connection-editor.png</file>
+            <file>images/designer-connection-highlight.png</file>
+            <file>images/designer-connection-making.png</file>
+            <file>images/designer-connection-mode.png</file>
+            <file>images/designer-connection-to-form.png</file>
+            <file>images/designer-connection-tool.png</file>
+            <file>images/designer-containers-dockwidget.png</file>
+            <file>images/designer-containers-frame.png</file>
+            <file>images/designer-containers-groupbox.png</file>
+            <file>images/designer-containers-stackedwidget.png</file>
+            <file>images/designer-containers-tabwidget.png</file>
+            <file>images/designer-containers-toolbox.png</file>
+            <file>images/designer-creating-menu-entry1.png</file>
+            <file>images/designer-creating-menu-entry2.png</file>
+            <file>images/designer-creating-menu-entry3.png</file>
+            <file>images/designer-creating-menu-entry4.png</file>
+            <file>images/designer-creating-menu1.png</file>
+            <file>images/designer-creating-menu2.png</file>
+            <file>images/designer-creating-menu3.png</file>
+            <file>images/designer-creating-menu4.png</file>
+            <file>images/designer-customize-toolbar.png</file>
+            <file>images/designer-dialog-preview.png</file>
+            <file>images/designer-dragging-onto-form.png</file>
+            <file>images/designer-edit-resource.png</file>
+            <file>images/designer-edit-resources-button.png</file>
+            <file>images/designer-editing-mode.png</file>
+            <file>images/designer-examples.png</file>
+            <file>images/designer-file-menu.png</file>
+            <file>images/designer-form-layout-cleanlooks.png</file>
+            <file>images/designer-form-layout-macintosh.png</file>
+            <file>images/designer-form-layout-windowsXP.png</file>
+            <file>images/designer-form-layout.png</file>
+            <file>images/designer-form-layoutfunction.png</file>
+            <file>images/designer-form-settings.png</file>
+            <file>images/designer-form-viewcode.png</file>
+            <file>images/designer-getting-started.png</file>
+            <file>images/designer-layout-inserting.png</file>
+            <file>images/designer-main-window.png</file>
+            <file>images/designer-making-connection.png</file>
+            <file>images/designer-manual-containerextension.png</file>
+            <file>images/designer-manual-membersheetextension.png</file>
+            <file>images/designer-manual-propertysheetextension.png</file>
+            <file>images/designer-manual-taskmenuextension.png</file>
+            <file>images/designer-object-inspector.png</file>
+            <file>images/designer-preview-device-skin.png</file>
+            <file>images/designer-preview-deviceskin-selection.png</file>
+            <file>images/designer-preview-style-selection.png</file>
+            <file>images/designer-preview-style.png</file>
+            <file>images/designer-preview-stylesheet.png</file>
+            <file>images/designer-promoting-widgets.png</file>
+            <file>images/designer-property-editor-add-dynamic.png</file>
+            <file>images/designer-property-editor-configure.png</file>
+            <file>images/designer-property-editor-link.png</file>
+            <file>images/designer-property-editor-remove-dynamic.png</file>
+            <file>images/designer-property-editor-toolbar.png</file>
+            <file>images/designer-property-editor.png</file>
+            <file>images/designer-reload-resources-button.png</file>
+            <file>images/designer-remove-custom-toolbar.png</file>
+            <file>images/designer-remove-resource-entry-button.png</file>
+            <file>images/designer-resource-browser.png</file>
+            <file>images/designer-resource-selector.png</file>
+            <file>images/designer-resources-editing.png</file>
+            <file>images/designer-resources-using.png</file>
+            <file>images/designer-selecting-widget.png</file>
+            <file>images/designer-set-layout.png</file>
+            <file>images/designer-set-layout2.png</file>
+            <file>images/designer-splitter-layout.png</file>
+            <file>images/designer-stylesheet-options.png</file>
+            <file>images/designer-stylesheet-usage.png</file>
+            <file>images/designer-tab-order-mode.png</file>
+            <file>images/designer-tab-order-tool.png</file>
+            <file>images/designer-validator-highlighter.png</file>
+            <file>images/designer-widget-box.png</file>
+            <file>images/designer-widget-final.png</file>
+            <file>images/designer-widget-initial.png</file>
+            <file>images/designer-widget-layout.png</file>
+            <file>images/designer-widget-preview.png</file>
+            <file>images/designer-widget-tool.png</file>
+        </files>
+    </filterSection>
+</QtHelpProject>
