@@ -4,18 +4,17 @@
     <virtualFolder>qdoc</virtualFolder>
     <customFilter name="Руководство по Qt Designer">
         <filterAttribute>qt</filterAttribute>
-		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>4.4.2</filterAttribute>
         <filterAttribute>tools</filterAttribute>
         <filterAttribute>designer</filterAttribute>
         <filterAttribute>ru</filterAttribute>
     </customFilter>
     <filterSection>
         <filterAttribute>qt</filterAttribute>
-		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>4.4.2</filterAttribute>
         <filterAttribute>tools</filterAttribute>
         <filterAttribute>designer</filterAttribute>
         <filterAttribute>ru</filterAttribute>
-        <!--<filterAttribute>ru</filterAttribute>-->
         <toc>
             <section title="Руководство по Qt Designer" ref="designer-manual.html">
                 <section title="Getting Started with Qt Designer" ref="designer-getting-started.html"></section>
@@ -126,7 +125,7 @@
             <file>designer-worldtimeclockplugin-worldtimeclockplugin-h.html</file>
             <file>designer-worldtimeclockplugin-worldtimeclockplugin-pro.html</file>
             <file>designer-worldtimeclockplugin.html</file>
-            <file>images/qt-logo.png</file>			
+			<file>images/qt-logo.png</file>	
             <file>images/designer-action-editor.png</file>
             <file>images/designer-add-custom-toolbar.png</file>
             <file>images/designer-add-files-button.png</file>

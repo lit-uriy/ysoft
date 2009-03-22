@@ -4,14 +4,14 @@
     <virtualFolder>qdoc</virtualFolder>
     <customFilter name="Руководство по Qt Assistant">
         <filterAttribute>qt</filterAttribute>
-		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>4.4.2</filterAttribute>
         <filterAttribute>tools</filterAttribute>
         <filterAttribute>assistant</filterAttribute>
         <filterAttribute>ru</filterAttribute>
     </customFilter>
     <filterSection>
         <filterAttribute>qt</filterAttribute>
-		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>4.4.2</filterAttribute>
         <filterAttribute>tools</filterAttribute>
         <filterAttribute>assistant</filterAttribute>
         <filterAttribute>ru</filterAttribute>
@@ -30,7 +30,7 @@
             <file>assistant-details.html</file>
             <file>assistant-manual.html</file>
             <file>classic.css</file>
-            <file>images/qt-logo.png</file>
+			<file>images/qt-logo.png</file>
             <file>images/assistant-address-toolbar.png</file>
             <file>images/assistant-assistant.png</file>
             <file>images/assistant-dockwidgets.png</file>

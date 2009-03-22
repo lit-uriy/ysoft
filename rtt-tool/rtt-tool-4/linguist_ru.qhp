@@ -4,17 +4,17 @@
     <virtualFolder>qdoc</virtualFolder>
     <customFilter name="Руководство по Qt Linguist">
         <filterAttribute>qt</filterAttribute>
-		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>4.4.2</filterAttribute>
         <filterAttribute>tools</filterAttribute>
         <filterAttribute>linguist</filterAttribute>
-        <filterAttribute>ru</filterAttribute>
+		<filterAttribute>ru</filterAttribute>
     </customFilter>
     <filterSection>
         <filterAttribute>qt</filterAttribute>
-		<filterAttribute>4.4.2</filterAttribute>
+        <filterAttribute>4.4.2</filterAttribute>
         <filterAttribute>tools</filterAttribute>
         <filterAttribute>linguist</filterAttribute>
-        <filterAttribute>ru</filterAttribute>
+		<filterAttribute>ru</filterAttribute>
         <toc>
             <section title="Руководство по Qt Linguist" ref="linguist-manual.html">
                 <section title="Руководство по Qt Linguist: Release Manager" ref="linguist-manager.html"></section>
@@ -53,7 +53,7 @@
             <file>linguist-trollprint-trollprint-pro.html</file>
             <file>linguist-trollprint.html</file>
             <file>linguist-ts-file-format.html</file>
-            <file>images/qt-logo.png</file>				
+			<file>images/qt-logo.png</file>		
             <file>images/linguist-arrowpad_en.png</file>
             <file>images/linguist-arrowpad_fr.png</file>
             <file>images/linguist-arrowpad_nl.png</file>
