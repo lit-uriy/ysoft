@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>com.trolltech.assistant.442</namespace>
+    <virtualFolder>qdoc</virtualFolder>
+    <customFilter name="Qt Assistant Manual">
+        <filterAttribute>qt</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+        <filterAttribute>assistant</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>qt</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+        <filterAttribute>assistant</filterAttribute>
+        <filterAttribute>4.4.2</filterAttribute>
+        <toc>
+            <section ref="assistant-manual.html" title="Qt Assistant Manual">
+                <section ref="assistant-manual.html" title="Qt Assistant Manual"></section>
+                <section ref="assistant-details.html" title="Qt Assistant in More Detail"></section>
+                <section ref="help-simpletextviewer.html" title="Simple Text Viewer Example"></section>
+                <section ref="assistant-custom-help-viewer.html" title="Using Qt Assistant as a Custom Help Viewer"></section>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="Qt Assistant" id="Qt Assistant" ref="assistant-manual.html#qt-assistant"></keyword>
+            <keyword name="Qt Assistant Manual" id="Qt Assistant Manual" ref="assistant-manual.html"></keyword>
+            <keyword name="Qt Assistant in More Detail" id="Qt Assistant in More Detail" ref="assistant-details.html"></keyword>
+            <keyword name="Simple Text Viewer Example" id="Simple Text Viewer Example" ref="help-simpletextviewer.html"></keyword>
+            <keyword name="Using Qt Assistant as a Custom Help Viewer" id="Using Qt Assistant as a Custom Help Viewer" ref="assistant-custom-help-viewer.html"></keyword>
+        </keywords>
+        <files>
+            <file>help-simpletextviewer-main-cpp.html</file>
+            <file>help-simpletextviewer-textedit-h.html</file>
+            <file>help-simpletextviewer-assistant-cpp.html</file>
+            <file>images/assistant-docwindow.png</file>
+            <file>help-simpletextviewer-mainwindow-cpp.html</file>
+            <file>help-simpletextviewer-mainwindow-h.html</file>
+            <file>assistant-custom-help-viewer.html</file>
+            <file>images/assistant-assistant.png</file>
+            <file>images/assistant-search.png</file>
+            <file>images/assistant-address-toolbar.png</file>
+            <file>help-simpletextviewer-assistant-h.html</file>
+            <file>images/assistant-preferences-filters.png</file>
+            <file>images/simpletextviewer-mainwindow.png</file>
+            <file>help-simpletextviewer-findfiledialog-cpp.html</file>
+            <file>help-simpletextviewer.html</file>
+            <file>help-simpletextviewer-findfiledialog-h.html</file>
+            <file>images/assistant-preferences-fonts.png</file>
+            <file>images/assistant-toolbar.png</file>
+            <file>images/assistant-dockwidgets.png</file>
+            <file>images/simpletextviewer-findfiledialog.png</file>
+            <file>images/assistant-preferences-documentation.png</file>
+            <file>images/assistant-filter-toolbar.png</file>
+            <file>assistant-details.html</file>
+            <file>help-simpletextviewer-simpletextviewer-pro.html</file>
+            <file>assistant-manual.html</file>
+            <file>help-simpletextviewer-textedit-cpp.html</file>
+            <file>images/simpletextviewer-example.png</file>
+            <file>images/assistant-toolbar.png</file>
+            <file>images/simpletextviewer-findfiledialog.png</file>
+            <file>images/trolltech-logo.png</file>
+            <file>images/assistant-search.png</file>
+            <file>images/assistant-preferences-documentation.png</file>
+            <file>classic.css</file>
+            <file>images/assistant-filter-toolbar.png</file>
+            <file>images/simpletextviewer-example.png</file>
+            <file>images/assistant-assistant.png</file>
+            <file>images/qt-logo.png</file>
+            <file>images/assistant-address-toolbar.png</file>
+            <file>images/simpletextviewer-mainwindow.png</file>
+            <file>images/assistant-dockwidgets.png</file>
+            <file>images/assistant-preferences-filters.png</file>
+            <file>images/assistant-docwindow.png</file>
+            <file>images/assistant-preferences-fonts.png</file>
+        </files>
+    </filterSection>
+</QtHelpProject>

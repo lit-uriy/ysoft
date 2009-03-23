@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>com.trolltech.qmake.442</namespace>
+    <virtualFolder>qdoc</virtualFolder>
+    <customFilter name="qmake Manual">
+        <filterAttribute>qt</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+        <filterAttribute>qmake</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>qt</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+        <filterAttribute>qmake</filterAttribute>
+        <filterAttribute>4.4.2</filterAttribute>
+        <toc>
+            <section ref="qmake-manual.html" title="QMake Manual">
+                <section ref="qmake-environment-reference.html" title="Configuring qmake's Environment"></section>
+                <section ref="qmake-running.html" title="Running qmake"></section>
+                <section ref="qmake-precompiledheaders.html" title="Using Precompiled Headers"></section>
+                <section ref="qmake-using.html" title="Using qmake"></section>
+                <section ref="qmake-advanced-usage.html" title="qmake Advanced Usage"></section>
+                <section ref="qmake-common-projects.html" title="qmake Common Projects"></section>
+                <section ref="qmake-function-reference.html" title="qmake Function Reference"></section>
+                <section ref="qmake-manual.html" title="qmake Manual"></section>
+                <section ref="qmake-platform-notes.html" title="qmake Platform Notes"></section>
+                <section ref="qmake-project-files.html" title="qmake Project Files"></section>
+                <section ref="qmake-reference.html" title="qmake Reference"></section>
+                <section ref="qmake-tutorial.html" title="qmake Tutorial"></section>
+                <section ref="qmake-variable-reference.html" title="qmake Variable Reference"></section>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="Configuring qmake's Environment" id="Configuring qmake's Environment" ref="qmake-environment-reference.html"></keyword>
+            <keyword name="Running qmake" id="Running qmake" ref="qmake-running.html"></keyword>
+            <keyword name="Using Precompiled Headers" id="Using Precompiled Headers" ref="qmake-precompiledheaders.html"></keyword>
+            <keyword name="Using qmake" id="Using qmake" ref="qmake-using.html"></keyword>
+            <keyword name="qmake Advanced Usage" id="qmake Advanced Usage" ref="qmake-advanced-usage.html"></keyword>
+            <keyword name="qmake Common Projects" id="qmake Common Projects" ref="qmake-common-projects.html"></keyword>
+            <keyword name="qmake Function Reference" id="qmake Function Reference" ref="qmake-function-reference.html"></keyword>
+            <keyword name="qmake" id="qmake" ref="qmake-manual.html#qmake"></keyword>
+            <keyword name="qmake Manual" id="qmake Manual" ref="qmake-manual.html"></keyword>
+            <keyword name="qmake Platform Notes" id="qmake Platform Notes" ref="qmake-platform-notes.html"></keyword>
+            <keyword name="qmake Project Files" id="qmake Project Files" ref="qmake-project-files.html"></keyword>
+            <keyword name="qmake Reference" id="qmake Reference" ref="qmake-reference.html"></keyword>
+            <keyword name="qmake Tutorial" id="qmake Tutorial" ref="qmake-tutorial.html"></keyword>
+            <keyword name="qmake Variable Reference" id="qmake Variable Reference" ref="qmake-variable-reference.html"></keyword>
+        </keywords>
+        <files>
+            <file>qmake-running.html</file>
+            <file>qmake-function-reference.html</file>
+            <file>qmake-project-files.html</file>
+            <file>qmake-using.html</file>
+            <file>qmake-manual.html</file>
+            <file>qmake-reference.html</file>
+            <file>qmake-tutorial.html</file>
+            <file>qmake-advanced-usage.html</file>
+            <file>qmake-common-projects.html</file>
+            <file>qmake-platform-notes.html</file>
+            <file>qmake-precompiledheaders.html</file>
+            <file>qmake-environment-reference.html</file>
+            <file>qmake-variable-reference.html</file>
+            <file>images/trolltech-logo.png</file>
+            <file>classic.css</file>
+            <file>images/qt-logo.png</file>
+        </files>
+    </filterSection>
+</QtHelpProject>
