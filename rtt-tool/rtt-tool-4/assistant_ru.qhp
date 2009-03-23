@@ -4,44 +4,75 @@
     <virtualFolder>qdoc</virtualFolder>
     <customFilter name="Руководство по Qt Assistant">
         <filterAttribute>qt</filterAttribute>
-        <filterAttribute>4.4.2</filterAttribute>
         <filterAttribute>tools</filterAttribute>
         <filterAttribute>assistant</filterAttribute>
-        <filterAttribute>ru</filterAttribute>
+		<filterAttribute>ru</filterAttribute>
     </customFilter>
     <filterSection>
         <filterAttribute>qt</filterAttribute>
-        <filterAttribute>4.4.2</filterAttribute>
         <filterAttribute>tools</filterAttribute>
         <filterAttribute>assistant</filterAttribute>
-        <filterAttribute>ru</filterAttribute>
+        <filterAttribute>4.4.2</filterAttribute>
+		<filterAttribute>ru</filterAttribute>
         <toc>
-            <section title="Руководство по Qt Assistant" ref="assistant-manual.html">
-                <section title="Qt Assistant в подробностях" ref="assistant-details.html"></section>
-                <section title="Использование Qt Assistant как пользовательской справочной системы" ref="assistant-custom-help-viewer.html"></section>
+            <section ref="assistant-manual.html" title="Руководство по Qt Assistant">
+                <section ref="assistant-manual.html" title="Руководство по Qt Assistant"></section>
+                <section ref="assistant-details.html" title="Qt Assistant в подробностях"></section>
+                <section ref="help-simpletextviewer.html" title="Пример Simple Text Viewer"></section>
+                <section ref="assistant-custom-help-viewer.html" title="Использование Qt Assistant как пользовательской справочной системы"></section>
             </section>
         </toc>
         <keywords>
-            <keyword name="Qt Assistant в подробностях" ref="assistant-details.html"/>
-            <keyword name="Использование Qt Assistant как пользовательской справочной системы" ref="assistant-custom-help-viewer.html"/>
+            <keyword name="Qt Assistant" id="Qt Assistant" ref="assistant-manual.html#qt-assistant"></keyword>
+            <keyword name="Руководство по Qt Assistant" id="Руководство по Qt Assistant" ref="assistant-manual.html"></keyword>
+            <keyword name="Qt Assistant в подробностях" id="Qt Assistant в подробностях" ref="assistant-details.html"></keyword>
+            <keyword name="Пример Simple Text Viewer" id="Пример Simple Text Viewer" ref="help-simpletextviewer.html"></keyword>
+            <keyword name="Qt Assistant как пользовательская справочная система" id="Qt Assistant как пользовательская справочная система" ref="assistant-custom-help-viewer.html"></keyword>
         </keywords>
         <files>
-            <file>assistant-custom-help-viewer.html</file>
-            <file>assistant-details.html</file>
-            <file>assistant-manual.html</file>
-            <file>classic.css</file>
-			<file>images/qt-logo.png</file>
-            <file>images/assistant-address-toolbar.png</file>
-            <file>images/assistant-assistant.png</file>
-            <file>images/assistant-dockwidgets.png</file>
+            <file>help-simpletextviewer-main-cpp.html</file>
+            <file>help-simpletextviewer-textedit-h.html</file>
+            <file>help-simpletextviewer-assistant-cpp.html</file>
             <file>images/assistant-docwindow.png</file>
-            <file>images/assistant-examples.png</file>
-            <file>images/assistant-filter-toolbar.png</file>
-            <file>images/assistant-preferences-documentation.png</file>
-            <file>images/assistant-preferences-filters.png</file>
-            <file>images/assistant-preferences-fonts.png</file>
+            <file>help-simpletextviewer-mainwindow-cpp.html</file>
+            <file>help-simpletextviewer-mainwindow-h.html</file>
+            <file>assistant-custom-help-viewer.html</file>
+            <file>images/assistant-assistant.png</file>
             <file>images/assistant-search.png</file>
+            <file>images/assistant-address-toolbar.png</file>
+            <file>help-simpletextviewer-assistant-h.html</file>
+            <file>images/assistant-preferences-filters.png</file>
+            <file>images/simpletextviewer-mainwindow.png</file>
+            <file>help-simpletextviewer-findfiledialog-cpp.html</file>
+            <file>help-simpletextviewer.html</file>
+            <file>help-simpletextviewer-findfiledialog-h.html</file>
+            <file>images/assistant-preferences-fonts.png</file>
             <file>images/assistant-toolbar.png</file>
+            <file>images/assistant-dockwidgets.png</file>
+            <file>images/simpletextviewer-findfiledialog.png</file>
+            <file>images/assistant-preferences-documentation.png</file>
+            <file>images/assistant-filter-toolbar.png</file>
+            <file>assistant-details.html</file>
+            <file>help-simpletextviewer-simpletextviewer-pro.html</file>
+            <file>assistant-manual.html</file>
+            <file>help-simpletextviewer-textedit-cpp.html</file>
+            <file>images/simpletextviewer-example.png</file>
+            <file>images/assistant-toolbar.png</file>
+            <file>images/simpletextviewer-findfiledialog.png</file>
+            <file>images/trolltech-logo.png</file>
+            <file>images/assistant-search.png</file>
+            <file>images/assistant-preferences-documentation.png</file>
+            <file>classic.css</file>
+            <file>images/assistant-filter-toolbar.png</file>
+            <file>images/simpletextviewer-example.png</file>
+            <file>images/assistant-assistant.png</file>
+            <file>images/qt-logo.png</file>
+            <file>images/assistant-address-toolbar.png</file>
+            <file>images/simpletextviewer-mainwindow.png</file>
+            <file>images/assistant-dockwidgets.png</file>
+            <file>images/assistant-preferences-filters.png</file>
+            <file>images/assistant-docwindow.png</file>
+            <file>images/assistant-preferences-fonts.png</file>
         </files>
     </filterSection>
 </QtHelpProject>
