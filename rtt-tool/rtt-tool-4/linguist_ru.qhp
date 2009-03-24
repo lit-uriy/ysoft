@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
-    <namespace>com.trolltech.linguist.442</namespace>
+    <namespace>ru.trolltech.linguist.442</namespace>
     <virtualFolder>qdoc</virtualFolder>
     <customFilter name="Руководство по Qt Linguist">
         <filterAttribute>qt</filterAttribute>

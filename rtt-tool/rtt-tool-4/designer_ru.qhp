@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
-    <namespace>com.trolltech.designer.442</namespace>
+    <namespace>ru.trolltech.designer.442</namespace>
     <virtualFolder>qdoc</virtualFolder>
     <customFilter name="Руководство по Qt Designer">
         <filterAttribute>qt</filterAttribute>
@@ -15,7 +15,7 @@
         <filterAttribute>4.4.2</filterAttribute>
 	<filterAttribute>ru</filterAttribute>
         <toc>
-            <section ref="designer-manual.html" title="Руководство по Qt">
+            <section ref="designer-manual.html" title="Руководство по Qt Designert">
                 <section ref="designer-manual.html" title="Примеры">
                     <section ref="designer-calculatorbuilder.html" title="Calculator Builder Example"></section>
                     <section ref="designer-calculatorform.html" title="Calculator Form Example"></section>

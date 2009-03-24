@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
-    <namespace>com.trolltech.qt.442</namespace>
+    <namespace>ru.trolltech.qt.442</namespace>
     <virtualFolder>qdoc</virtualFolder>
     <customFilter name="Qt 4.4.2 - RU">
         <filterAttribute>qt</filterAttribute>
