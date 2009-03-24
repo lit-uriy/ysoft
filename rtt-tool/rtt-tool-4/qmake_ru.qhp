@@ -1,66 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
-    <namespace>ru.trolltech.qmake.442</namespace>
+    <namespace>com.trolltech.qmake.442</namespace>
     <virtualFolder>qdoc</virtualFolder>
     <customFilter name="Руководство по qmake">
         <filterAttribute>qt</filterAttribute>
-        <filterAttribute>4.4.2</filterAttribute>
         <filterAttribute>tools</filterAttribute>
         <filterAttribute>qmake</filterAttribute>
         <filterAttribute>ru</filterAttribute>
     </customFilter>
     <filterSection>
         <filterAttribute>qt</filterAttribute>
-        <filterAttribute>4.4.2</filterAttribute>
         <filterAttribute>tools</filterAttribute>
         <filterAttribute>qmake</filterAttribute>
+        <filterAttribute>4.4.2</filterAttribute>
         <filterAttribute>ru</filterAttribute>
         <toc>
-            <section title="Руководство по qmake" ref="qmake-manual.html">
-                <section title="Использование qmake" ref="qmake-using.html"></section>
-                <section title="Файлы проекта qmake" ref="qmake-project-files.html"></section>
-                <section title="Запуск qmake" ref="qmake-running.html"></section>
-                <section title="qmake, замечания о платформах" ref="qmake-platform-notes.html"></section>
-                <section title="Описание qmake" ref="qmake-reference.html"></section>
-                <section title="Описание переменных qmake" ref="qmake-variable-reference.html"></section>
-                <section title="Описание функций qmake" ref="qmake-function-reference.html"></section>
-                <section title="Настройка окружения qmake" ref="qmake-environment-reference.html"></section>
-                <section title="Продвинутое использование qmake" ref="qmake-advanced-usage.html"></section>
-                <section title="Использование прекомпилированных заголовков" ref="qmake-precompiledheaders.html"></section>
-                <section title="Учебное пособие по qmake" ref="qmake-tutorial.html"></section>
-                <section title="Общие проекты qmake" ref="qmake-common-projects.html"></section>
+            <section ref="qmake-manual.html" title="Руководство по QMake">
+                <section ref="qmake-environment-reference.html" title="Настройка окружения qmake"></section>
+                <section ref="qmake-running.html" title="Запуск qmake"></section>
+                <section ref="qmake-precompiledheaders.html" title="Использование прекомпилированных заголовков"></section>
+                <section ref="qmake-using.html" title="Использование qmake"></section>
+                <section ref="qmake-advanced-usage.html" title="Продвинутое использование qmake"></section>
+                <section ref="qmake-common-projects.html" title="Общие проекты qmake"></section>
+                <section ref="qmake-function-reference.html" title="Описание функций qmake"></section>
+                <section ref="qmake-manual.html" title="Руководство по qmake"></section>
+                <section ref="qmake-platform-notes.html" title="qmake, замечания о платформах"></section>
+                <section ref="qmake-project-files.html" title="Файлы проекта qmake"></section>
+                <section ref="qmake-reference.html" title="Описание qmake"></section>
+                <section ref="qmake-tutorial.html" title="Учебное пособие по qmake"></section>
+                <section ref="qmake-variable-reference.html" title="Описание переменных qmake"></section>
             </section>
         </toc>
         <keywords>
-            <keyword name="Использование qmake" ref="qmake-using.html"/>
-            <keyword name="Файлы проекта qmake" ref="qmake-project-files.html"/>
-            <keyword name="Запуск qmake" ref="qmake-running.html"/>
-            <keyword name="qmake, замечания о платформах" ref="qmake-platform-notes.html"/>
-            <keyword name="Описание qmake" ref="qmake-reference.html"/>
-            <keyword name="Описание переменных qmake" ref="qmake-variable-reference.html"/>
-            <keyword name="Описание функций qmake" ref="qmake-function-reference.html"/>
-            <keyword name="Настройка окружения qmake" ref="qmake-environment-reference.html"/>
-            <keyword name="Продвинутое использование qmake" ref="qmake-advanced-usage.html"/>
-            <keyword name="Использование прекомпилированных заголовков" ref="qmake-precompiledheaders.html"/>
-            <keyword name="Учебное пособие по qmake" ref="qmake-tutorial.html"/>
-            <keyword name="Общие проекты qmake" ref="qmake-common-projects.html"/>
+            <keyword name="Настройка окружения qmake" id="Настройка окружения qmake" ref="qmake-environment-reference.html"></keyword>
+            <keyword name="Запуск qmake" id="Запуск qmake" ref="qmake-running.html"></keyword>
+            <keyword name="Использование прекомпилированных заголовков" id="Использование прекомпилированных заголовков" ref="qmake-precompiledheaders.html"></keyword>
+            <keyword name="Использование qmake" id="Использование qmake" ref="qmake-using.html"></keyword>
+            <keyword name="Продвинутое использование qmake" id="Продвинутое использование qmake" ref="qmake-advanced-usage.html"></keyword>
+            <keyword name="Общие проекты qmake" id="Общие проекты qmake" ref="qmake-common-projects.html"></keyword>
+            <keyword name="Описание функций qmake" id="Описание функций qmake" ref="qmake-function-reference.html"></keyword>
+            <keyword name="qmake" id="qmake" ref="qmake-manual.html#qmake"></keyword>
+            <keyword name="Руководство по qmake" id="Руководство по qmake" ref="qmake-manual.html"></keyword>
+            <keyword name="qmake, замечания о платформах" id="qmake, замечания о платформах" ref="qmake-platform-notes.html"></keyword>
+            <keyword name="Файлы проекта qmake" id="Файлы проекта qmake" ref="qmake-project-files.html"></keyword>
+            <keyword name="Описание qmake" id="Описание qmake" ref="qmake-reference.html"></keyword>
+            <keyword name="Учебное пособие по qmake" id="Учебное пособие по qmake" ref="qmake-tutorial.html"></keyword>
+            <keyword name="Описание переменных qmake" id="Описание переменных qmake" ref="qmake-variable-reference.html"></keyword>
         </keywords>
         <files>
-            <file>classic.css</file>
+            <file>qmake-running.html</file>
+            <file>qmake-function-reference.html</file>
+            <file>qmake-project-files.html</file>
+            <file>qmake-using.html</file>
+            <file>qmake-manual.html</file>
+            <file>qmake-reference.html</file>
+            <file>qmake-tutorial.html</file>
             <file>qmake-advanced-usage.html</file>
             <file>qmake-common-projects.html</file>
-            <file>qmake-environment-reference.html</file>
-            <file>qmake-function-reference.html</file>
-            <file>qmake-manual.html</file>
             <file>qmake-platform-notes.html</file>
             <file>qmake-precompiledheaders.html</file>
-            <file>qmake-project-files.html</file>
-            <file>qmake-reference.html</file>
-            <file>qmake-running.html</file>
-            <file>qmake-tutorial.html</file>
-            <file>qmake-using.html</file>
+            <file>qmake-environment-reference.html</file>
             <file>qmake-variable-reference.html</file>
-			<file>images/qt-logo.png</file>
+            <file>images/trolltech-logo.png</file>
+            <file>classic.css</file>
+            <file>images/qt-logo.png</file>
         </files>
     </filterSection>
 </QtHelpProject>
