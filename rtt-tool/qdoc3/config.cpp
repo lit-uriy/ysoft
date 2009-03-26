@@ -648,7 +648,13 @@ void Config::load(Location location, const QString& fileName)
             location.fatal(tr("Cannot open file '%1': %2").arg(fileName).arg(fin.errorString()));
     }
 
-    QString text = fin.readAll();
+//==== Yura =====
+	QTextStream in(&fin);
+	in.setCodec("UTF-8"); 
+	
+	QString text = in.readAll();
+    //QString text = fin.readAll();
+//===============	
     text += QLatin1String("\n\n");
     text += QChar('\0');
     fin.close();

@@ -4,11 +4,26 @@ DEFINES += QDOC2_COMPAT
 
 QT = core xml
 CONFIG += console
-build_all:!build_pass {
-    CONFIG -= build_all
-    CONFIG += release
-}
+CONFIG += release
+
+
+# Yura ======
+DESTDIR     = ./build
+OBJECTS_DIR = ./build/obj
+UI_DIR      = ./build/uic
+MOC_DIR     = ./build/moc
+RCC_DIR		= ./build/rcc
+
+
+#CONFIG (debug, debug|release) {
+#	OBJECTS_DIR  = $$join(OBJECTS_DIR,,,d)
+#	TARGET       = $$join(TARGET,,,d)
+#}
+#==============
+
 mac:CONFIG -= app_bundle
+
+
 HEADERS += apigenerator.h \
            archiveextractor.h \
 	   atom.h \
@@ -53,6 +68,7 @@ HEADERS += apigenerator.h \
 	   tree.h \
 	   uncompressor.h \
            webxmlgenerator.h
+
 SOURCES += apigenerator.cpp \
            archiveextractor.cpp \
 	   atom.cpp \
