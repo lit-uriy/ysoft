@@ -33,11 +33,20 @@ void DbHanle::createTable(QStringList lst)
 (  \
   F_ID			INTEGER	PRIMARY KEY AUTOINCREMENT";
   
-	foreach(QString str, lst)
+	foreach(QString str, fields)
 	{
 		tmp = ",\n" + str + " Text";
 		qstr += tmp;
 	}
+	/*
+	// если существуют поля "ComponentName" и "Value"
+	// то создаем вычисляемое поле "FullName"
+	if (fields.contains("ComponentName") && fields.contains("Value"))
+	{
+		tmp = ",\n" + "FullName" + " Text";
+		qstr
+	}
+	*/
 	qstr += ");";
 	
 	ok = q.exec(qstr);
