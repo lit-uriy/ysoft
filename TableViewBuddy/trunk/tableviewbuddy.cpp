@@ -1,8 +1,15 @@
-/*!
- *	\file	tableviewbuddy.cpp
- *	\brief	Реализация класса "TableViewBuddy".
+/**	\file	tableviewbuddy.cpp
+ *	\brief	Класс-партнёр для табличного представления (Qt4).
+ *	\author	Литкевич Юрий (lit-uriy@yandex.ru).
+ *	Этот класс задуман для расширения возможностей табличного представления
+ *	наиболее распространёнными функциями. Такими как копирование, форматирование таблицы и др.
+ **********************************************
+ *	EN: 
+ *	Class-buddy for table view (Qt4).
+ *	Author:	Yuriy Litkevich (lit-uriy@yandex.ru).
+ *	This class is conceived for the extension of possibilities of a table view
+ *	by the most used functions. Such as copying, formatting of the table view, etc.
  */
-
 #include <QTableView>
 #include <QtDebug>
 #include <QAction>
@@ -16,7 +23,8 @@ inline void initMyResource(){ Q_INIT_RESOURCE(tableviewbuddy); }
 TableViewBuddy::TableViewBuddy(QTableView *tv): QObject(tv)
 {
 	view = tv;
-	// !!!!!!!!! Меняет поведение контекстного меню представления !!!!!!!!!!!
+	// RU: !!!!!!!!! Меняет политику контекстного меню представления !!!!!!!!!!!
+	// EN: !!!!!!!!! Changes context menu policy policy of the table view !!!!!!!!!!!
 	view->setContextMenuPolicy(Qt::ActionsContextMenu);
 
 	initMyResource();
