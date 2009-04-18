@@ -23,9 +23,9 @@ TableViewBuddy::TableViewBuddy(QTableView *tv): QObject(tv)
 	
 	actionCopy = new QAction(this);
 	actionCopy->setIcon (QIcon(":/images/edit_copy.png"));
-	actionCopy->setText(tr("&Копировать"));
+	actionCopy->setText(tr("&Copy"));
 	actionCopy->setShortcut(tr("Ctrl+C"));
-	actionCopy->setStatusTip(tr("Открыть существующий файл"));
+	actionCopy->setStatusTip(tr("Copy selected cells"));
 	connect(actionCopy, SIGNAL(triggered()),
 			 this,		SLOT(slotCopy()));
 	
