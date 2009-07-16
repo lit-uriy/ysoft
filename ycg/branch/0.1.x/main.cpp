@@ -18,7 +18,7 @@
 #include "uireader.h"
 #include "codegenerator.h"
 
-const char * SW_VERSION = "0.1.0";
+const char * SW_VERSION = "0.1.1";
 
 
 void showHelp(const char *appName)

@@ -8,7 +8,7 @@
 #include "[classname].h"
 
 
-[ClassName]::[ClassName](QWidget* p_parent) : QWidget(p_parent)
+[ClassName]::[ClassName](QWidget* p_parent) : [ParentClass](p_parent)
 {
 	setupUi(this);
 
