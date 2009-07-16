@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/res">
+   <file>[uiclassname].cpp</file>
+   <file>[uiclassname].h</file>
+</qresource>
+</RCC>
